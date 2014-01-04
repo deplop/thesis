@@ -2,6 +2,7 @@
 %\documentclass[12pt,a4j]{article}
 %\documentclass[12pt,a4j]{cls/report}
 \documentclass[12pt,a4j]{report}
+
 \usepackage[dvipdfm,bookmarks=true,bookmarksnumbered=true,bookmarkstype=toc]{hyperref}
 %\documentstyle[sty/eclepsf, sty/epsbox, ascmac, 12pt, sty/wakizono]{cls/harureport}
 %\documentclass[12pt,a4j]{article}
@@ -10,12 +11,12 @@
 %\usepackage[sty/ascmac]{cls/report}
 %\usepackage[dvips]{graphicx}
 \usepackage[dvips]{graphicx,color}
- \graphicspath{{/Users/cpsf/Dropbox/CPSF/4Year/project/picture/}}
+ \graphicspath{{/home/mdbl/picture/}}
 \usepackage{verbatim}
 %\usepackage{fancybx}
 \usepackage{footnote}
 %\usepackage{jtygm}
-\usepackage{multirow}
+%\usepackage{multirow}
 %\usepackage{ascmac}
 \usepackage{listings}
 \usepackage{cite}
@@ -25,6 +26,17 @@
 \usepackage[tight]{subfigure}
 
 %\usepackage{amsmath}
+
+\usepackage{epstopdf}
+\usepackage{epsfig}
+%\usepackage{fontspec} 
+%\setmainfont{URW Palladio L}
+%\newfontfamily\jap[Scale=0.8]{Kochi Mincho}  % here we simply define a new font switch
+%\usepackage{xltxtra}
+\usepackage{CJK}
+\epstopdfsetup{suffix=-\SourceExt-converted-to}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
 
 \definecolor{javared}{rgb}{0.6,0,0} % for strings
 \definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
@@ -130,8 +142,8 @@ morecomment=[s][\color{javadocblue}]{/**}{*/}
 %\input{contents/related}
 \input{contents/algorithm}
 \input{contents/implementation}
-%\input{contents/evaluation}
-%\input{contents/conclution}
+\input{contents/application}
+\input{contents/conclusion}
 \input{contents/ack}
 \input{contents/pub}
 \bibliographystyle{ieeetr}

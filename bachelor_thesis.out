@@ -13,3 +13,12 @@
 \BOOKMARK [2][-]{subsection.3.0.3}{3.0.3 Ingredient Amount}{subsection.3.0.1}
 \BOOKMARK [2][-]{subsection.3.0.4}{3.0.4 Ingredient Uniqueness}{subsection.3.0.1}
 \BOOKMARK [2][-]{subsection.3.0.5}{3.0.5 Featured Index}{subsection.3.0.1}
+\BOOKMARK [0][-]{chapter.4}{4 Application}{}
+\BOOKMARK [1][-]{section.4.1}{4.1 The System's Outline}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{4.2 The System's Model}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 The Recipe Suggestion Module Based On Available Materials}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 The Featured Index Calculation Module}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.3}{4.2.3 The Nearest Recipe Selection Module}{section.4.2}
+\BOOKMARK [0][-]{chapter.5}{5 Conclusions and Future Works}{}
+\BOOKMARK [1][-]{section.5.1}{5.1 Conclusions}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{5.2 Future Works}{chapter.5}

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.2)  4 JAN 2014 09:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.4)  4 JAN 2014 12:30
 entering extended mode
  %&-line parsing enabled.
 **bachelor_thesis.tex
 (./bachelor_thesis.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, pinyin, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size12.clo
@@ -190,22 +190,19 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box26
 \fn@width=\dimen108
 )
-(/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen109
-)
 (/usr/share/texmf-texlive/tex/latex/listings/listings.sty
 \lst@mode=\count95
 \lst@gtempboxa=\box27
 \lst@token=\toks18
 \lst@length=\count96
-\lst@currlwidth=\dimen110
+\lst@currlwidth=\dimen109
 \lst@column=\count97
 \lst@pos=\count98
-\lst@lostspace=\dimen111
-\lst@width=\dimen112
+\lst@lostspace=\dimen110
+\lst@width=\dimen111
 \lst@newlines=\count99
 \lst@lineno=\count100
-\lst@maxwidth=\dimen113
+\lst@maxwidth=\dimen112
 
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
@@ -223,7 +220,7 @@ LaTeX Info: Redefining \cite on input line 285.
 LaTeX Info: Redefining \nocite on input line 356.
 Package: cite 2009/08/29  v 5.2
 )
-(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
+(/var/lib/texmf/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
 
 (/usr/share/texmf-texlive/tex/generic/babel/english.ldf
@@ -232,7 +229,7 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 (/usr/share/texmf-texlive/tex/generic/babel/babel.def
 File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count103
-\U@D=\dimen114
+\U@D=\dimen113
 )
 \l@british = a dialect from \language\l@english 
 \l@UKenglish = a dialect from \language\l@english 
@@ -244,9 +241,9 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip43
 \subfigcapskip=\skip44
-\subfigcaptopadj=\dimen115
+\subfigcaptopadj=\dimen114
 \subfigbottomskip=\skip45
-\subfigcapmargin=\dimen116
+\subfigcapmargin=\dimen115
 \subfiglabelskip=\skip46
 \c@subfigure=\count104
 \c@lofdepth=\count105
@@ -260,7 +257,54 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip47
 \subfig@bottom=\skip48
 )
-(/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+(/usr/share/texmf-texlive/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2009/10/17 v2.4 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2009/10/17 v2.4 Base part for package epstopdf
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/grfext.sty
+Package: grfext 2007/09/30 v1.0 Managing graphics extensions (HO)
+)
+
+Package epstopdf Warning: Other drivers than `pdftex.def' are not supported.
+
+)) (/usr/share/texmf-texlive/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen116
+\epsfysize=\dimen117
+) (./CJK.sty
+Package: CJK 2012/05/07 4.8.3
+
+(./MULEenc.sty
+Package: MULEenc 2012/05/07 4.8.3
+) (/usr/share/texmf/tex/latex/CJK/CJK.enc
+File: CJK.enc 2008/12/29 4.8.2
+)
+LaTeX Info: Redefining \selectfont on input line 755.
+\CJK@indent=\box29
+) (./algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (./algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count108
+\c@ALG@rem=\count109
+\c@ALG@nested=\count110
+\ALG@tlm=\skip49
+\ALG@thistlm=\skip50
+\c@ALG@Lnr=\count111
+\c@ALG@blocknr=\count112
+\c@ALG@storecount=\count113
+\c@ALG@tmpcounter=\count114
+\ALG@tmplength=\skip51
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 
@@ -270,21 +314,85 @@ LaTeX Warning: Unused global option(s):
 (./bachelor_thesis.aux)
 \openout1 = `bachelor_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-Package hyperref Info: Link coloring OFF on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+Package hyperref Info: Link coloring OFF on input line 68.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -292,25 +400,25 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count108
+\c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 56.
-LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
 
 (./bachelor_thesis.out) (./bachelor_thesis.out)
 \@outlinefile=\write3
 \openout3 = `bachelor_thesis.out'.
 
-\AtBeginShipoutBox=\box29
-\c@lstlisting=\count109
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 106.
+\AtBeginShipoutBox=\box30
+\c@lstlisting=\count116
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 118.
 
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
  [1
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -326,15 +434,43 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-)
-\tf@toc=\write4
-\openout4 = `bachelor_thesis.toc'.
-
  [1
 Non-PDF special ignored!
 Non-PDF special ignored!
 
 
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!])
+\tf@toc=\write4
+\openout4 = `bachelor_thesis.toc'.
+
+ [2
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -354,21 +490,33 @@ Non-PDF special ignored!] (./bachelor_thesis.lot)
 \tf@lot=\write5
 \openout5 = `bachelor_thesis.lot'.
 
- [2
-Non-PDF special ignored!
-Non-PDF special ignored!
-
-
-Non-PDF special ignored!
-Non-PDF special ignored!] (./bachelor_thesis.lof)
-\tf@lof=\write6
-\openout6 = `bachelor_thesis.lof'.
-
  [3
 Non-PDF special ignored!
 Non-PDF special ignored!
 
 
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] (./bachelor_thesis.lof)
+\tf@lof=\write6
+\openout6 = `bachelor_thesis.lof'.
+
+ [4
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!] (./contents/intro.tex
 Chapter 1.
@@ -383,22 +531,7 @@ Non-PDF special ignored!
 
 
 Non-PDF special ignored!
-Non-PDF special ignored!]
-
-LaTeX Warning: Citation `morioka:camera-projecter' on page 2 undefined on input
- line 8.
-
-
-LaTeX Warning: Citation `nakauchi:recog' on page 2 undefined on input line 8.
-
-
-LaTeX Warning: Citation `villalobos:image-calorie' on page 2 undefined on input
- line 8.
-
-
-LaTeX Warning: Citation `ide:inexper' on page 2 undefined on input line 8.
-
-[2
+Non-PDF special ignored!] [2
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -444,365 +577,34 @@ Chapter 3.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
+(/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.bdg
+File: UTF8.bdg 2008/12/29 4.8.2
+)
+(/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
+File: UTF8.enc 2008/12/29 4.8.2
+)
+(/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
+File: UTF8.chr 2008/12/29 4.8.2
+)
+LaTeX Font Info:    Try loading font information for C70+min on input line 14.
 
-LaTeX Warning: Citation `web:recipe' on page 8 undefined on input line 6.
-
-
-! LaTeX Error: Environment CJK undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 \begin{CJK}
-                {UTF8}{min}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[8
+(/usr/share/texmf/tex/latex/CJK/UTF8/c70min.fd
+File: c70min.fd 2008/12/29 4.8.2
+)
+(/usr/share/texmf/tex/latex/CJK/UTF8/c70min.fdx
+File: c70min.fdx 2008/12/29 4.8.2
+) [8
 Non-PDF special ignored!
 Non-PDF special ignored!
 
 
 Non-PDF special ignored!
-Non-PDF special ignored!]
-
-LaTeX Warning: Reference `tab:IF' on page 9 undefined on input line 14.
-
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ° in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no ‰ in font cmr12!
-Missing character: There is no ∏ in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no Ω in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ≠ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no é in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no † in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ≥ in font cmr12!
-Missing character: There is no ñ in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ° in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no † in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ≥ in font cmr12!
-Missing character: There is no ñ in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no ≥ in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ° in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no ‰ in font cmr12!
-Missing character: There is no ∏ in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no Ω in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ≠ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no é in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ã in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no Ø in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ∑ in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ∏ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ã in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no º in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ° in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no è in font cmr12!
-Missing character: There is no ö in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no è in font cmr12!
-Missing character: There is no ö in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no ∞ in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Æ in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no ï in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ç in font cmr12!
-
-! LaTeX Error: \begin{document} ended by \end{CJK}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.45 \end{CJK}
-              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Environment CJK undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 \begin{CJK}
-                {UTF8}{min}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Missing character: There is no Â in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no ß in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no † in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no ª in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Æ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ∑ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ´ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no ª in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Æ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ∑ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no å in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ã in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ï in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no æ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ñ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ñ in font cmr12!
-Missing character: There is no Ñ in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no õ in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no ∂ in font cmr12!
-Missing character: There is no è in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no è in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Æ in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no ¢ in font cmr12!
-
-LaTeX Warning: Reference `tab:IA' on page 9 undefined on input line 81.
-
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-
-LaTeX Warning: Reference `tab:IAoutlier' on page 9 undefined on input line 81.
-
-[9
+Non-PDF special ignored!] (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
+File: UTF8.enc 2008/12/29 4.8.2
+)
+(/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
+File: UTF8.chr 2008/12/29 4.8.2
+) [9
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -810,336 +612,12 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!]
-
-! LaTeX Error: Environment CJK undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.87 \begin{CJK}
-                {UTF8}{min}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Reference `tab:IU' on page 10 undefined on input line 89.
-
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ° in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no å in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no Ω in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no î in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ï in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ç in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no ö in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no ≠ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no º in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no ª in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Æ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no ï in font cmr12!
-Missing character: There is no ∑ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ≠ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no é in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no é in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ≠ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no é in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no ï in font cmr12!
-Missing character: There is no ∑ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ≠ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no é in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no å in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ã in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no õ in font cmr12!
-Missing character: There is no ‰ in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no ≥ in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ñ in font cmr12!
-Missing character: There is no Ñ in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no õ in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no ∂ in font cmr12!
-Missing character: There is no è in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ç in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no † in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Å in font cmr12!
-
-! LaTeX Error: \begin{document} ended by \end{CJK}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.119 \end{CJK}
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no Ω in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no î in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ï in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ç in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ° in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no å in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no Ü in font cmr12!
-
-! LaTeX Error: \begin{document} ended by \end{CJK}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.140 \end{CJK}
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Environment CJK undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.145 \begin{CJK}
-                 {UTF8}{min}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Reference `tab:FI' on page 10 undefined on input line 147.
-
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ¥ in font cmr12!
-Missing character: There is no ç in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ¥ in font cmr12!
-Missing character: There is no ç in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no ≥ in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no ¢ in font cmr12!
-[10
+Non-PDF special ignored!] (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
+File: UTF8.enc 2008/12/29 4.8.2
+)
+(/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
+File: UTF8.chr 2008/12/29 4.8.2
+) [10
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1159,185 +637,191 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
+Non-PDF special ignored!]) (./contents/application.tex [12
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!]
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ¥ in font cmr12!
-Missing character: There is no ç in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ∏ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no ≤ in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no ß in font cmr12!
-Missing character: There is no Ê in font cmr12!
-Missing character: There is no † in font cmr12!
-Missing character: There is no π in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ø in font cmr12!
-Missing character: There is no õ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Æ in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no Ë in font cmr12!
-Missing character: There is no ∫ in font cmr12!
-Missing character: There is no ´ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ï in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no æ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no É in font cmr12!
-Missing character: There is no ≥ in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no ¢ in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no ¢ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no ª in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ø in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Æ in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ç in font cmr12!
-Missing character: There is no µ in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no È in font cmr12!
-Missing character: There is no Ö in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ó in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Ç in font cmr12!
-Missing character: There is no á in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no Ü in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no å in font cmr12!
-Missing character: There is no Á in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no ≥ in font cmr12!
-
-
-! LaTeX Error: \begin{document} ended by \end{CJK}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.175 \end{CJK}
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-) (./contents/ack.tex [12
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] [13
+Chapter 4.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+[13
 Non-PDF special ignored!
 Non-PDF special ignored!
 
 
 Non-PDF special ignored!
-Non-PDF special ignored!]) (./contents/pub.tex [14
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!])
-No file bachelor_thesis.bbl.
-[15
-Non-PDF special ignored!
-Non-PDF special ignored!
+Non-PDF special ignored!]
+File: system.eps Graphic file (type eps)
+ <system.eps>
+Overfull \hbox (38.02747pt too wide) in paragraph at lines 23--24
+ [][] 
+ []
 
-
+[14
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [15
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!] [16
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] (./bachelor_thesis.aux)
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]) (./contents/conclusion.tex [17
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [18
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]
+Chapter 5.
+) (./contents/ack.tex [19
+Non-PDF special ignored!
+Non-PDF special ignored!
 
-LaTeX Warning: There were undefined references.
+
+Non-PDF special ignored!
+Non-PDF special ignored!] [20
+Non-PDF special ignored!
+Non-PDF special ignored!
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Non-PDF special ignored!
+Non-PDF special ignored!]) (./contents/pub.tex [21
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]) (./bachelor_thesis.bbl [22
+Non-PDF special ignored!
+Non-PDF special ignored!
 
- ) 
+
+Non-PDF special ignored!
+Non-PDF special ignored!]) [23
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [24
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] (./bachelor_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5909 strings out of 495061
- 86053 string characters out of 1182622
- 194495 words of memory out of 3000000
- 8936 multiletter control sequences out of 15000+50000
- 9403 words of font info for 33 fonts, out of 3000000 for 9000
+ 7883 strings out of 495046
+ 111176 string characters out of 1181938
+ 220041 words of memory out of 3000000
+ 10740 multiletter control sequences out of 15000+50000
+ 31002 words of font info for 117 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,9n,40p,1258b,366s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
-m/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on bachelor_thesis.pdf (20 pages, 152218 bytes).
+ 38i,9n,40p,1258b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.p
+fb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjhira.pfb></usr/share/texmf/font
+s/type1/wadalab/JIS/dmjka.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkata
+.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkb.pfb></usr/share/texmf/font
+s/type1/wadalab/JIS/dmjkc.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkd.p
+fb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjke.pfb></usr/share/texmf/fonts/
+type1/wadalab/JIS/dmjkf.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkg.pfb
+></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkh.pfb></usr/share/texmf/fonts/ty
+pe1/wadalab/JIS/dmjki.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkj.pfb><
+/usr/share/texmf/fonts/type1/wadalab/JIS/dmjkk.pfb></usr/share/texmf/fonts/type
+1/wadalab/JIS/dmjkl.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkp.pfb></u
+sr/share/texmf/fonts/type1/wadalab/JIS/dmjsy.pfb>
+Output written on bachelor_thesis.pdf (29 pages, 276400 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 419 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

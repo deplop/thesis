@@ -14,5 +14,14 @@
 \contentsline {subsection}{\numberline {3.0.3}Ingredient Amount}{9}{subsection.3.0.3}
 \contentsline {subsection}{\numberline {3.0.4}Ingredient Uniqueness}{10}{subsection.3.0.4}
 \contentsline {subsection}{\numberline {3.0.5}Featured Index}{10}{subsection.3.0.5}
-\contentsline {subsubsection}{Long Talk}{15}{section*.6}
-\contentsline {subsubsection}{Poster}{15}{section*.7}
+\contentsline {chapter}{\numberline {4}Application}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}The System's Outline}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}The System's Model}{14}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}The Recipe Suggestion Module Based On Available Materials}{14}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}The Featured Index Calculation Module}{15}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}The Nearest Recipe Selection Module}{16}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Works}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusions}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}Future Works}{19}{section.5.2}
+\contentsline {subsubsection}{Long Talk}{22}{section*.6}
+\contentsline {subsubsection}{Poster}{22}{section*.7}

@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{morioka:camera-projecter}
+S.~Morioka and H.~Ueda, ``Cooking support system utilizing built-in cameras and
+  projectors,'' in {\em MVA2011 IAPR Conference on Machine Vision
+  Applications}, pp.~84--89, TeX Users Group, June 13-15 2011.
+
+\bibitem{nakauchi:recog}
+Y.~Nakauchi, T.~Suzuki, A.~Tokumasu, and S.~Murakami, ``Cooking procedure
+  recognition and support system by intelligent environments,'' in {\em RIISS
+  '09}, TeX Users Group, 2009.
+
+\bibitem{villalobos:image-calorie}
+G.~Villalobos, R.~Almaghrabi, P.~Pouladzadeh, and S.~Shirmohammadi, ``An image
+  procesing approach for calorie intake measurement,'' 2012.
+
+\bibitem{ide:inexper}
+I.~Ide, Y.~Shidochi, Y.~Nakamura, D.~Deguchi, T.~Takahashi, and H.~Murase,
+  ``Multimedia supplementation to a cooking recipe text for facilitating its
+  understanding to inexperienced users,'' in {\em IEEE International Symposium
+  on Multimedia}, TeX Users Group, 2010.
+
+\bibitem{web:recipe}
+Wiki, ``Typical foods by area.'' \url{http://www.s-recipe.com/}.
+
+\bibitem{cosine}
+Wiki, ``Cosine similarity.''
+  \url{http://en.wikipedia.org/wiki/Cosine\_similarity}.
+
+\bibitem{euclidean}
+Wiki, ``Euclidean distance.''
+  \url{http://en.wikipedia.org/wiki/Euclidean\_distance}.
+
+\bibitem{Qian:2004:SEC:967900.968151}
+G.~Qian, S.~Sural, Y.~Gu, and S.~Pramanik, ``Similarity between euclidean and
+  cosine angle distance for nearest neighbor queries,'' in {\em Proceedings of
+  the 2004 ACM symposium on Applied computing}, SAC '04, (New York, NY, USA),
+  pp.~1232--1237, ACM, 2004.
+
+\end{thebibliography}
