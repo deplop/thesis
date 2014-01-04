@@ -1,0 +1,39 @@
+\chapter{Introduction}\label{chap:intro}
+%section 1
+This chapter describes the background of our research and the overview of the problem.
+\clearpage
+\section{Background}\label{sec:intro_background}
+%subsection1
+	%Nowadays, what up? -> the popular of WSN -> home environment 
+Nowadays with advances in hardware and wireless network technologies, we can make multifunctional tiny sensor devices through low-cost, low-power consumption methods. By using hundreds of sensor devices with several types of sensor nodes, we can make a Wireless Sensor Network (WSN). We can use WSN for collecting, processing and analyzing data in a large area. And we can make a lot of applications with it such as environment observation and surveillance on remote health services. The cost of sensor node is depreciating, thus we can apply WSN at home environment in near future.\\
+	%\subsection{Requirements of home environment WSN}
+On the other hand, to use WSN at home, we need setup it at first. This is not only at first time, but also need to change error sensor nodes, reinstall some sensor nodes for change struct of network such as change target or change application. And it is better if users can make a WSN by themselves. Therefore, for home environment usage, WSN needs to meet the following requirements:
+\begin{itemize}
+\item {Easy deployment and modification: Because it is used by regular users who do not have skills about WSN, thus a simple method is required to setup WSN, modify required sensor nodes.}
+\item {Fast setup and modify: A lot of applications have hundred sensor nodes. An example can be found in environment observation or security monitoring applications, in which users have to put sensor nodes at some where, then it requires a fast method to setup number of sensor nodes.}
+\item {Maintaing security of WSN: For home environment usage such as remote health services or security application, privacy of users is an important requirement. For this, data communication inside WSN needs to be protected.}
+\item {Low cost: For home with regular users, the cost of WSN also become importance, with cheaper WSN we can make it more popular. Therefore we need make a WSN cheap as cheap possible.}
+\end{itemize}
+	%\subsection{What is difficult when deploy a WSN}
+In daily task, to ensure privacy of the user, we always use lock, password, security key. For example, we can set password for laptop, Wi-Fi or Smartphone to protect it. We will input password from physical keyboard, virtual keyboard or biometric devices such as camera, microphone and fingerprint. But sensor nodes must be tiny, cheap and low energy consumption, thus we have to limit hardware of it. We have to avoid unnecessary hardware, therefore it is impossible to directly input password, security key to sensor nodes. \\
+Nowadays, users have to select true sensor nodes and input correlative security code to a manage computer for adding this sensor node with securely. This task takes a lot of time to perform. We also can use near communication like NFC, RFID to transfer data automatically to sensor nodes. But the problem is cost of sensor node, it makes sensor nodes more expensive and wasteful, especially when we only use it once at the setup step. Therefore we need a setup method, can help end-users to make a secured Wireless Sensor Network easy and simply with low cost.
+\section{Challenges and Research Goals}\label{sec:challenge}
+We have to keep the cost of sensor nodes as cheap as possible, the size of sensor nodes as small as possible. We also need to apply it at home environment for regular users, need to help them make a WSN with a hundred sensor nodes. Therefore we propose some requirements for setup method as follows: 
+\begin{enumerate}
+\item Applying with common hardware of sensor nodes to ensure cost of sensor nodes
+\item Providing a friendly, intuitive interaction
+\item Deploying numbers of sensor nodes as fast as possible
+\item Providing a way to ensure privacy of WSN
+\end{enumerate}
+
+In research environment such as laboratory and office, we have a rich equipment with some types of sensors and hardware. But in home environment, WSN is used by regular users, thus sensor nodes need to be cheap and small. And thus, our first goal is to propose a faster setup method with common sensor nodes.
+
+Second problem of sensor nodes is their low performance CPU and limited power source. Because of this, setup method need to be as simple as possible. Third problem problem is about number of sensor nodes, with a hundred sensor nodes case, it takes a lot of time to setup with each sensor node method. Therefore, a method which can setup several sensor nodes at once is very useful. We can reduce the time to setup a larger WSN in geometric progression.
+
+Last problem is data privacy, then we need a security key for encrypting and decrypting transfer data. But in the setup step, we do not have any security key, therefore we require a safe communication method without encrypt/decrypt data for exchanging security key.
+
+We present a method called HUSTLE, which enables users to deploy sensor network based on light communication among smartphone and sensor nodes. HUSTLE is developed to use common hardware of sensor nodes (LED and light sensor) while providing a friendly and intuitive interaction to setup, reducing time to setup by multiple sensor nodes at once. HUSTLE also provides a way to maintain security of WSN.
+
+%section 3
+\section{Structure of Thesis}\label{sec:intro_structure}
+This thesis is organized as following. In chapter \ref{chap:bg}, we discuss background of deploying WSN problems, some security protocol for WSN and some communication techniques and limited of each. We describe some related works in chapter \ref{chap:related}. In chapter \ref{chap:hustle}, we propose HUSTLE and explain how it works, and also explain light communication specifically, which is used in HUSTLE. Then we discuss the design and implementation of HUSTLE in chapter \ref{chap:implementation}. Chapter \ref{chap:evaluation} discusses about evaluation of HUSTLE, purpose, methodology, comparison targets and results. Finally, in chapter \ref{chap:conc}, we conclude this thesis and discuss about our future works.

@@ -1,0 +1,352 @@
+\chapter{HUSTLE}\label{chap:hustle}
+%\section{Introduction}
+This chapter introduces HUSTLE. Firstly we discuss about advantages and disadvantages of communication techniques, and explain why we use light communication in HUSTLE. Secondly, we explain the concept of HUSTLE with hardware and software requirements. Thirdly, we describe data flow and protocol of HUSTLE. In the next, we discuss about architecture of HUSTLE. Finally, we propose a method to encode and decode light pattern in home environment with specific properties of common smartphon and, sensor node with indoor lighting conditions.
+
+\clearpage
+\section{Approach to a near communication technique}
+
+In the Background chapter, we shown that LED and light sensor are common hardware of sensor nodes. We have also known that smartphones with camera flashlight are increasing, and flashlight also becomes common hardware of Smartphone. With flashlight, LED, and light sensor we can implement light communication.%, which can help to solve deploying problem in our research.
+
+In the Background chapter, we also described some near communication techniques such as Bluetooth, Infrared, NFC and RFID. In Related Works chapter, we also described two method: \emph{Shake Well Before Use: Authentication Based on Accelerometer Data \cite{Mayrhofer:2007:SWB:1758156.1758168}} and \emph{Vib-Connect: A Device Collaboration Interface Using Vibration \cite{vibconnect}}. 
+
+We analyze advantages and disadvantages of all methods in Table \ref{tab:hustle_advance_disadvance_technique}. As mentioned in the first chapter (Introduction chapter), four requirements that HUSTLE has to meet are: (1) it can be applied with common hardware of sensor nodes to ensure cost of sensor nodes, (2) it provides a friendly, intuitive interaction, (3) it can set-up numbers sensor nodes as fast as possible and (4) it provides a way to ensure privacy of WSN. We examined exiting methods and techniques base on these requirements in Table \ref{tab:hustle_analyze_method_requirements}
+
+However Infrared, Bluetooth, NFC, Shake, Vib-connect can not meet our research requirements. Meanwhile light communication can meet all of our research requirements, therefore we explore the use of light communication in HUSTLE.
+
+\begin{table}[p]
+\caption{Advantages and disadvantages of communication techniques and methods}
+\begin{center}
+\begin{tabular}{|p{0.15\linewidth}|p{0.4\linewidth}|p{0.4\linewidth}|}
+\hline
+Technique&Advantages&Disadvantages\\
+\hline
+Infrared&Cheap. Invisible. Secure in short range. &Not a common hardware among sensor nodes and personal devices\\
+\hline
+Bluetooth&Invisible. Secure in short range. & Need pair step. Not a common hardware of sensor nodes\\ 
+\hline
+NFC, RFID&Invisible. Secure in short range. & Not a common hardware among sensor nodes among personal devices\\
+\hline
+Shake&Invisible, secure& Very low speed, hard to idenfify whenever it is successful or not\\
+\hline
+Vib-Connect& Invisible, Secure in short range & Low speed, need a quiet environment\\
+\hline
+Light communication& Work perfect with indoor condition, secure in short range & Low speed\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:hustle_advance_disadvance_technique}
+\end{table}%
+
+\begin{table}[p]
+\caption{Communication techniques, methods and our research requirements}
+\begin{center}
+\begin{tabular}{|p{0.15\linewidth}|p{0.14\linewidth}|p{0.25\linewidth}|p{0.25\linewidth}|p{0.13\linewidth}|}
+\hline
+Technique& (1) Common hardware & (2) Friendly& (3) Faster & (4) Privacy\\
+\hline
+Infrared& X & O & O & O\\
+\hline
+Bluetooth& X & X (need pair) & X(one time only one) & O\\
+\hline
+NFC, RFID& X & O & O & O\\
+\hline
+Shake& O & X(difficult to feedback) & X(very low speed) & O\\
+\hline
+Vib-Connect& O & X(need quite environment) & X (Low speed) & O\\
+\hline
+Light communication& O & O & O(multi-sensor nodes) & O\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:hustle_analyze_method_requirements}
+\end{table}%
+
+
+\section{Hardware and Software requirements}\label{sec:hustle_requirement}
+
+%Say about hardware and software, which is used in HUSTLE\\
+%WSN, sensor nodes, sensor, smartphone....
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.80\linewidth]{image/eps/hustle_hardware.eps}
+\caption{HUSTLE: Hardware}
+\label{fig:hustle_hardware}
+\end{center}
+\end{figure}
+
+In HUSTLE, we need some hardware like Figure \ref{fig:hustle_hardware}. We have smartphone with an accessory, sensor node, sink node and a computer. To implement HUSTLE, we need some requirements for hardware and WSN. There are:
+
+\begin{itemize}
+	\item {With Smartphone, we need a camera's flashlight, which can controlled by programming and also can process signal from microphone line.} 
+	\item{With sensor node, we need an LED or a light sensor. We can control LED by programming with fast frequency, about some hundred times per second. Light sensor also needs to be get brightness value by programming with fast frequency, about some thousand times per second.}
+	\item{With WSN, we need a secured WSN with secure protocol. It also has an unique ID to distinct with another. About routing protocol, sink node can transfer a message to all of sensor nodes, also broadcast a message to new sensor nodes.}
+\end{itemize}
+
+%Concept of HUSTLE, how it work? how to add new sensor nodes? what is interaction?
+\section{HUSTLE's Concept}
+
+In HUSTLE, when sensor nodes are started, it activates HUSTLE in order to add sensor nodes to WSN. After HUSTLE is finished, the main application will be run. HUSTLE is discussed in below.
+
+\begin{figure}[p]
+\begin{center}
+\includegraphics[width=.40\linewidth]{image/eps/hustle_touch_accessory.eps}
+\caption{Touch Interaction: Touching an Accessory of Smartphone}
+\label{fig:hustle_touch_accessory}
+
+\includegraphics[width=.50\linewidth]{image/eps/hustle_direct_flash.eps}
+\caption{Blink Interaction: Directing Smartphone's flashlight to all new sensor nodes}
+\label{fig:hustle_direct_flash}
+\end{center}
+\end{figure}
+
+With a smartphone like mentioned requirements, we can use a flashlight to blink light patterns. If the sensor node has a light sensor, it can use the sensor to receive the light pattern. Otherwise, in case it has an LED, we use the LED to send data to the Smartphone. We can connect the Smartphone with an accessory like Figure \ref{fig:hustle_touch_accessory} that can receive light patterns from sensor nodes and we also use screen of it to show the status of this process. With this, we can provide two setup interactions like Figure \ref{fig:hustle_touch_accessory} and Figure \ref{fig:hustle_direct_flash}. When users want to add some new sensor nodes, the first user must log-in to sever with sever address and security key, after that users can process like Figure \ref{fig:hustle_touch_accessory} or Figure \ref{fig:hustle_direct_flash} according hardware of sensor nodes, have LED or light sensor ( in case it have both LED and light sensor, light sensor will be used).
+
+\begin{itemize}
+\item Have an LED case (Figure \ref{fig:hustle_touch_accessory}): In this case, user turn on sensor nodes, touch it with accessory at Smartphone. After that, sensor node uses LED to send one-time security key to Smartphone automatically. With this, we can encrypt-decrypt setup data, which is sent over wireless communication later such as WSN information, secure protocol information or something else.
+\item Have a light sensor case (Figure \ref{fig:hustle_direct_flash}): In this case, user turn on all of new sensor nodes, put it on a table example, direct Smartphone's flashlight to it and push send button. After that, flashlight is used to send a one-time security key to all of sensor nodes automatically. We use the key for encrypting-decrypting data like previous case.
+\end{itemize}
+
+\section{Architecture of HUSTLE}
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.9\textwidth]{image/eps/implement_architecture_hustle.eps}
+\caption{Architecture of HUSTLE}
+\label{fig:implement_architechture}
+\end{figure}
+
+The architecture of HUSTLE is shown in this section. We have user interface module, wireless communication module, controlling module and light communication module. The connection of each module and each part Sensor Node, Smartphone and Sink Node is shown in Figure \ref{fig:implement_architechture}. Smartphone and Sensor Node is connected over light communication module, which is used to exchange one-time security key and identifier. Exchanging data between Smartphone and Sink Node such as one-time security key, added sensor nodes information is exchanged over wireless communication, and this data is encrypted by fixed security key of user. With this reason we can ensure that data is exchanged safely. Between Sink Node and Sensor Node, in adding process data such as network information, secure protocol information is exchanged by wireless communication and is encrypted by using one-time security key which is exchanged by light communication module beforehand. When sensor nodes are added to network, the data is encrypted by secure protocol of network.
+
+\section{HUSTLE Protocol}\label{sec:hustle_protocol}
+
+In this section, we present about adding new sensor nodes protocol. Depending on hardware of sensor nodes we divide it in to two cases, LED case and light sensor case.
+
+\subsection{New sensor node with LED}
+\begin{figure}[tb]
+\begin{center}
+\includegraphics[width=.80\linewidth]{image/eps/hustle_protocol_led.eps}
+\caption{HUSTLE Protocol: Add a new sensor node with LED}
+\label{fig:hustle_protocol_led}
+\end{center}
+\end{figure}
+
+\begin{figure}[tb]
+\begin{center}
+\includegraphics[width=.80\linewidth]{image/eps/hustle_broadcast.eps}
+\caption{HUSTLE Protocol: Broadcast setting-up message to new sensor nodes}
+\label{fig:hustle_broadcast}
+\end{center}
+\end{figure}
+
+As shown in Figure \ref{fig:hustle_protocol_led}, in HUSTLE, the first step (1) is when users turn on the sensor node, then deployed HUSTLE program will be activated. At same time, we touch LED part of the sensor node with the accessory of the smartphone. After that, in (2.1), we use LED of the sensor node to send identification and one-time security key to the smartphone. The smartphone, when receiving data from step (2.1) also sends the information to the sink node over wireless communication in step (2.2). In step (2.1) because flashlight is only active in a small area and with it's properties is isotropic, then we can send data safely in the privacy area such as at home or in a room. In (2.2), exchanging data is encrypted by user's security key, then we also can send data safely in step (2).
+
+With the received security key in step (2.2), the sink node encrypts setting-up data (WSN information, routing information and secure information, etc.) in step (3).
+
+In step (4), the sink node broadcasts encrypted setting-up data, and to enlarge the broadcast area, all of added sensor nodes also broadcast this encrypted setting-up data (Figure \ref{fig:hustle_broadcast}). In this, a message from the sink node to others added sensor nodes is encrypted by secure protocol, message broadcast from the sink node, added sensor nodes to new sensor nodes is encrypted by the security key. At the new sensor nodes, received the security key in step (2.1) is used to decrypt and setting-up with the decrypted data. Therefore, we can maintain securely of WSN. After this step, new sensor node becomes a part of WSN.
+
+In the next step, to feedback to users about setup process, just added sensor nodes sends a feedback message to the sink node and the sink node forwards this message to the smartphone in step (6). And step (6.1), the smartphone's screen is used for feedback to users about deploying process like what sensor nodes were just added. Then main application is initiated.
+
+\subsection{New sensor nodes with light sensor}
+
+\begin{figure}[tb]
+\begin{center}
+\includegraphics[width=.80\linewidth]{image/eps/hustle_protocol_light_sensor.eps}
+\caption{HUSTLE Protocol: Add new sensor nodes with light sensor}
+\label{fig:hustle_protocol_light_sensor}
+\end{center}
+\end{figure}
+
+Protocol schema of this case is shown in Figure \ref{fig:hustle_protocol_light_sensor}. In HUSTLE, in step (1) user turns on all of new sensor nodes manually. After finishing step (1), the user uses the smartphone with HUSTLE program at step (2). In step (2), after users pushes "Send" button, there are two small processes (2.1) sending WSN identification and one-time security key by light communication and (2.2) sending this security key by wireless communication. In (2.1), we use the smartphone's flashlight to send WSN identification and security key to new sensor nodes that should be added to. When (2.1) finished, new sensor nodes save the identification and the security key in step (2.1.a), the smartphone also sends the security key to the sink node over the Internet (Wi-Fi connection or Mobile connection) in step (2.2).
+
+With the received security key in step (2.2), the sink node encrypts setting-up data (WSN information, routing information and secure information, etc.) in step (3).
+
+In step (4), the sink node broadcasts encrypted setting-up data, and to enlarge the broadcast area, all of added sensor nodes also broadcast this encrypted setting-up data ( Figure \ref{fig:hustle_broadcast}). In this, a message from the sink node to others added sensor nodes is encrypted by secure protocol, broadcasted message from the sink node, added sensor nodes to new sensor nodes is encrypted by the security key. At the new sensor nodes, it can use received security key in step (2.1) to decrypt and setting-up with the decrypted data. Therefore, we can maintain security of WSN. After this step, new sensor nodes become a part of WSN.
+
+Like previous case, in order to feedback to user about setting-up process, just added sensor nodes send a feedback message to the sink node and it forwards this message to the smartphone in step (6). And step (6.1), the smartphone screen is used to feedback to user about setting-up process, what sensor nodes just added (by sensor node ID, type of sensor node). Then main application is initiated.
+
+\section{Light communication in HUSTLE}\label{sec:hustle_light}
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.7\textwidth]{graph/eps/hustle_compare_signal.eps}
+\caption{Light communication: Signal from light sensor and photocell}
+\label{fig:hustle_compare_signal}
+\end{figure}
+
+In this section, we describe about principles of light communication between Smartphone and Sensor Node. We have two types of light communication like Figure \ref{fig:hustle_touch_accessory} and \ref{fig:hustle_direct_flash}. For receiving light signal, we have different hardware, light sensor of sensor node or photocell of accessory. With light sensor of sensor node, we can get light signal directly by reading status of light sensor but with photocell of accessory (Figure \ref{fig:hustle_microphone}), we only get the change of light signal, similar to derivative of light signal (the difference of two type signal is shown in Figure \ref{fig:hustle_compare_signal}). Therefore we also present two ways to decode with light sensor and photocell.
+
+\subsection{Light communication by Smartphone's flashlight and light sensor}
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.7\textwidth]{graph/eps/hustle_environment_light.eps}
+\caption{Light communication: Environment light}
+\label{fig:hustle_environment_light}
+\end{figure}
+
+When we direct flashlight to sensor node, sensor node's light sensor can sense the change of flashlight. We can detect whenever flashlight-blink is started or finished and calculate length of blink period. Unlike \emph{LED and photocell} case (Figure \ref{fig:hustle_touch_accessory}), in this case besides light signal from flashlight, we also have light signal from in-door light such as fluorescent lighting or incandescent lamp. On the other hand, in home environment all of electric goods use alternating current (AC) power, then light signal form in-door light is also changed with very fast periodically. As a result, we have strong noise from environment's like Figure \ref{fig:hustle_environment_light}. In addition, we have a big change of brightness when changing environment such as form fluorescent lighting to incandescent lamp, or move to another room. With this reason, it is difficult to detect light pattern and need a method to reduce the noise and calculate threshold dynamically. To solve noise problem, we propose a method to calculate threshold dynamically, which will be described in \emph{Decoding Light Pattern} part.
+
+\subsection{Light communication by LED and Photocell}
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.55\textwidth]{image/eps/hustle_microphoneciruit.eps}
+\caption{Microphone circuit}
+\label{fig:hustle_microphone}
+\end{figure}
+
+We have a simple circuit of microphone in Figure \ref{fig:hustle_microphone}. We sense sound of environment by measuring the change of resistance of microphone. When the sound changes, the resistance of microphone is also changed correlatively. Therefore we can get sound signal from OUPUT gate.
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.55\textwidth]{image/eps/hustle_photocell.eps}
+\caption{Photocell resistance and brightness.}	 	
+\label{fig:hustle_photon}
+\end{figure}
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.45\textwidth]{image/eps/hustle_soundsignal_lightchange.eps}
+\caption{Brightness state and microphone signal.}
+\label{fig:hustle_resultphoton}
+\end{figure}
+
+Photocell also has same properties with microphone, its resistance is changed correlatively with change of brightness like Figure \ref{fig:hustle_photon}. Therefore we can connect photocell with microphone line like Figure \ref{fig:hustle_hardware} and measure the change of brightness by signal from microphone line. From this signal we can detect start and end of LED blink like Figure \ref{fig:hustle_resultphoton} and calculate length of blink period.
+
+\subsection{Encoding Light Pattern}
+
+As mentioned, we need to send data with LED and Smartphone's flashlight, therefore we must encode data to light pattern. And for decode process, we need to know when data is sent therefore we add START flag at begin of data and FINISH flag at end of data. With this data, we represent data by getting binary of data and insert light pattern according 0 bit or 1 bit.
+
+About light pattern, because we only can change state of flashlight form ON to OFF or OFF to ON, we represent START flag, FINISH flag, bit 0, bit 1 by only ON or OFF time length. In addition, we tested performance of Smartphone's flashlight by turning ON and turning OFF flashlight in a period time and measure this change by sensor node's light sensor. The result of flashlight is shown at Figure \ref{fig:hustle_period_measure} and Figure \ref{fig:hustle_period_error_range}. In Figure \ref{fig:hustle_period_measure}, we show the range of receiving period when sending a period. In Figure \ref{fig:hustle_period_error_range} we show \emph{error range} of receiving period with sending period, in there \emph{error range} is calculated by $Er = (Tr_{max} - Tr_{min})/T$ ( with $T$ is sent period time length, $Tr_{max}$ is max time length of receiving period, $Tr_{min}$ is min time length of receiving period). 
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.6\textwidth]{graph/eps/hustle_period_measure.eps}
+\caption{Flashlight performance: Sending period and receiving period}
+\label{fig:hustle_period_measure}
+\end{figure}
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.6\textwidth]{graph/eps/hustle_period_error_range.eps}
+\caption{Flashlight performance: Error range = $(max-min)/T$}
+\label{fig:hustle_period_error_range}
+\end{figure}
+
+
+From this result, we know that flashlight performance is not good and it is difficult to send and receive too short period. Example can find at $T = 10ms$, we received time length from $7ms$ to $32ms$ and \emph{error range} is $240\%$. In addition, we also difficult to distinguish one period form a list of period like 20ms from [10,20,30,40]ms. With this reason, instead we make light pattern based on state of light ON or OFF ( that mean we have base time period $T$, turn on light in $n*N$ represent n bit 1 and turn off light in $n*N$ represent n bit 0), we make light pattern base on time length of blink-light like Figure \ref{fig:hustle_light_pattern}. In there, white period represent turn ON state, and black period is turn OFF state.
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.35\textwidth]{image/eps/hustle_pattern.eps}
+\caption{Light communication: Light pattern}
+\label{fig:hustle_light_pattern}
+\end{figure}
+
+We represent 0 bit is a blink-light with time length is T in both ON or OFF state. 1 bit is a blink-light with time length is $n*T$. With START flag, we need to start it with turn ON state light, therefore we make START pattern which is turn ON in $n1*T$ then turn OFF in $n2*T$. With FINISH flag, because number of data bits is a even number, we represent FINISH float with turn ON in $n2*T$ then turn OFF in $n1*T$. The example of proposed light pattern is shown in Figure \ref{fig:hustle_light_pattern_example} below.
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.75\textwidth]{image/eps/hustle_encode.eps}
+\caption{Light communication: Encoding example}
+\label{fig:hustle_light_pattern_example}
+\end{figure}
+
+\subsection{Decoding Light Pattern}
+
+In this part, we present about decode light signal to data by use light sensor of sensor node and photocell of accessory.
+We divide the decode process in to 3 steps, \emph{(1)read light signal}, \emph{(2)detect light period time from light signal}, \emph{(3)get light pattern from light period time and get data}.
+
+\subsubsection{Decoding by light sensor of sensor node}
+
+In step \emph{(1)read light signal}, it is very simple. We get signal by reading state of light sensor and storing light value in a array for each fixed length window (Figure \ref{fig:hustle_one_window}).
+
+In step \emph{(2)detect light period time from light signal}, most important work is how to calculate threshold for detect HIGHT and LOW brightness. Because we only turn ON or turn OFF flashlight and getting data cycle is about some millisecond, then the signal always changes immediately from LOW to HIGHT or HIGHT to LOW when we change state of flashlight.
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.9\textwidth]{graph/eps/hustle_one_window_alpha.eps}
+\caption{Decoding with light sensor: a window}
+\label{fig:hustle_one_window}
+\end{figure}
+
+Like Figure \ref{fig:hustle_environment_light} we have a lot of noise signal, but different from signal of flashlight, the change of noise is lower with more frequency. Therefore we can use these properties to calculate threshold dynamically. We propose a method base on the change of light signal in two continuos signals (Figure \ref{fig:hustle_dynamic_threshold}). 
+%\begin{figure}[h]
+%\includegraphics[width=0.9\textwidth]{graph/eps/hustle_distribute_delta_window.eps}
+%\caption{Decode light pattern: distribute of $\Delta = |S_{n-1} - S{n}| $}
+%\label{fig:hustle_distribute_delta}
+%\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{graph/eps/hustle_dynamic_threshold.eps}
+\caption{Dynamic threshold}
+\label{fig:hustle_dynamic_threshold}
+\end{figure}
+
+At first, we collect signal in each window with fixed size (Figure \ref{fig:hustle_one_window}), we collect frequency of changed value $\Delta$ between two signal $S_{n-1}$ and $S_{n}$ ($\Delta = |S_{n-1} - S{n}| $). After that, we find longest empty segment (called $LES$) whose frequency is zero from frequency array. This segment starts from $LES_{begin}$ to $LES_{end}$ (Image of this process is shown in Figure \ref{fig:hustle_dynamic_threshold}). We also find the minimum signal $S_{min}$ in this window and calculate threshold for this window by below equation:
+
+\begin{equation}
+{Th}=S_{min} + \frac{LES_{begin}+LES_{end}}{2}
+\end{equation}
+
+And now, we prove it work. From properties of noise signal and blink signal, noise signal has low change and blink signal has high change of brightness. Therefore we can expect that LES can split $\Delta$ array in to two parts, noise's $\Delta$ and blink's $\Delta$. In addition, from Figure \ref{fig:hustle_one_window} we can image that value of brightness is changed in $[S_{min}, S_{min} + \alpha]$ or $[S_{max} - \alpha, S_{max}]$. Then we have:
+
+\begin{equation}
+\left\{ 
+\begin{array}{lclr}
+    LES_{end} & \gg &  \alpha  & \text{because $\alpha$ from noise} \\
+    LES_{end} - LES_{begin}  & \gg & \alpha \\
+    LES_{begin} & > & \alpha & \text{because $\alpha$ from noise} \\%& \approx & S_{min} + \alpha & \text{because $\alpha$ from noise} \\
+  %  LES_{end} - LES_
+    LES_{end}  & <  & S_{max} - S_{min} &
+\end{array} \right.
+\end{equation}
+
+Because $LES_{begin} > \alpha$ and $LES_{end} > LES_{begin}$ then we have%\approx S_{min}+ \alpha > \alpha$ and $LES_{end} > LES_{begin}$ then we have
+
+\begin{equation}
+\begin{array}{lcl}
+
+   S_{min} + \frac{LES_{begin}+LES_{end}}{2} & > & S_{min} + \frac{LES_{begin}+LES_{begin}}{2} \\
+    & > &  S_{min} + \frac{\alpha+\alpha}{2} \\
+     & >  & S_{min} + \alpha
+\end{array} 
+\end{equation}
+
+Same with this, we also have $LES_{end}  <  S_{max} - S_{min}$ (then we can write  $S_{min} + LES_{end} <  S_{max}$) and $LES_{end} - LES_{begin} \gg \alpha$  (then we can write $LES_{end} - LES_{begin}  > 2\alpha$)
+
+\begin{equation}
+\begin{array}{lcl}
+   S_{min} + \frac{LES_{begin}+LES_{end}}{2} & < &  S_{min} +  \frac{LES_{end} - 2\alpha +LES_{end}}{2} \\
+     & <  & S_{min} + LES_{end} - \alpha \\
+     & <  & S_{max} - \alpha
+\end{array} 
+\end{equation}
+
+Therefore, we have 
+\begin{equation}
+    [S_{min}, S_{min} + \alpha]< Th < [S_{max} - \alpha, S_{max}]
+\end{equation}
+and we can use $Th$ to determine low or high signal.
+
+After we calculated threshold value, we compare each value of light signal and threshold to detect the beginning and the ending of light pattern. The beginning of current light pattern is defined by previous light value $S_{n-1}$ lower threshold $Th$ and now light value $S_n$ higher or equal threshold $Th$. In other cases, the ending of previous light pattern is defined by previous light value $S_{n-1}$ is higher or equal threshold $Th$ and now light value $S_n$ is lower threshold $Th$. With this, we can detect length time of each turn ON, OFF period and detect light pattern.
+
+In the next step \emph{(3)get light pattern from light period time and get data}, we use detected light period length time to detect light pattern. This process relies on structure of light pattern, which is described in previous part \emph{Encoding Light Pattern}. The first, we set status is \emph{CHECKING-START-FLAG}. We compare now period length and previous period length with base time $T$ to check "whether it is START pattern or not". In case we detected START pattern, the status is switched to \emph{GETTING-DATA-AND-CHECK-FINISH-FLAG}. In \emph{GETTING-DATA-AND-CHECK-FINISH-FLAG} state, we check the current period and previous period with base time $T$ to check "whether it is FINISH pattern or not?". If it is not, we check the current period length to get 0 or 1 bit. In case FINISH pattern is detected, we finish receiving process , get array of bit and reset status to \emph{CHECKING-START-FLAG}.
+
+\subsubsection{Decoding with photocell of accessory with Smartphone}
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.9\textwidth]{graph/eps/hustle_decode_photon.eps}
+\caption{Decoding with photocell: a window}
+\label{fig:hustle_decode_photon}
+\end{figure}
+
+Similar with light sensor case, in photocell case we also have 3 steps to decode light pattern. There are \emph{(1)read light signal}, \emph{(2)detect light period time from light signal}, \emph{(3)get light pattern from light period time and get data}. Step(1) is similar with previous case. Unlike light sensor case in step (2), we have different ways to detect the start of blinking light period. In Figure \ref{fig:hustle_decode_photon} we show data from photocell when we change state of LED. We have the change of signal correlative with LED, then we can detect the end and begin of a light period by get maximum absolute value of light signal in a minus segment or plus segment. If the max absolute value is higher than threshold, it is the beginning of new light period and the ending of previous light period. We also have a similar way to calculate Threshold value in each window, which is described in light sensor case. We also have a NOISE which is marked by red circle, and we can recognize that this noise have the same sign with next peak, therefore we can avoid this type of noise by checking sign of the current peak with previous peak. If it has the same sign, we save this peak as the end of light period instead of previous peak. In other cases, if it doesn't have the same sign, we process a light period which is the end in previous peak and set the begin of new peak is previous.
+
+In step (3) to get light pattern from light period time and decode to get data, we do it the same way with light sensor case.
+
+\section{Summary}
+
+In this section, we summarize this chapter. We explain HUSTLE by showing hardware requirements for it, and how it works. In HUSTLE, we assumes sensor node has light sensor or LED, we use light sensor to receive one-time security key from the smartphone's flashlight or use LED to send data to the smartphone by using a accessory. With this key we can encrypt and decrypt setup data and send it safely. We also describe encode and decode light pattern with distinct properties of home environment and LED, flashlight which is used in HUSTLE. With this, HUSTLE can successfully fulfill all requirements in our research.

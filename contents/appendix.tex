@@ -1,0 +1,35 @@
+\section*{Appendix: Empirical SSNR model}
+
+To develop empirical SSNR (smoothed SNR) models, we performed several
+basic experiments in our testbed.  We transmitted a constant rate UDP
+stream at 1 Mbps between two nodes. Then we changed the location of
+the receiver and measured the value of SSNR and throughput.
+Fig.\ref{fig:thruput} shows the results. We found that the values of
+SSNR larger than 10 dB were stable enough for the threshold value
+($S_{max}$).  In these experiments we used the WaveLAN NICs.
+
+Next, we traced the relationship between SSNR and the communication
+distance in a wireless outdoor environment. This experiment was
+performed in our flat rectangular campus ground (300m x 300m) with no
+obstacles or walls.  Fig.\ref{fig:snr-dis} shows the transition of
+SSNR as a function of the distance. At small distance ($<$ 10m), we
+have obtained the significantly increasing values of SSNR.  As we can
+see from the figure, the values of SSNR increase considerably when the
+distance is smaller than 10m. In addition, even when the distance is
+larger than 10m, the values of SSNR monotonically decrease with
+respect to the distance.  In this case, we used the IEEE 802.11b NICs.
+
+\begin{figure}[htb]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfile{file=image/thr-ssnr.eps,height=160pt}
+\vspace{-6mm}
+\caption{SSNR vs. throughput}
+\label{fig:thruput}
+\end{center}
+\vspace{4mm}
+\begin{center}
+\epsfile{file=image/snr-dis.eps,height=130pt}
+\caption{\label{fig:snr-dis} SSNR vs. Distance}
+\end{center}
+\end{figure}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

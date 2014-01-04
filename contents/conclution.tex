@@ -1,0 +1,19 @@
+\chapter{Conclusions and Future Works}\label{chap:conc}
+\section{Conclusions}\label{sec:conc_conclucsion}
+
+In this thesis, we propose HUSTLE method to help users make a secured WSN faster and more simply. HUSTLE is used to solve deploying problem, which occurs when applying WSN at home for regular users. Compared with base method and another method, instead of special hardware for communication and identification, HUSTLE only use common hardware of sensor nodes and Smartphone such as sensor node's light sensor, sensor node's LED, smartphone's flashlight and a simple accessory of smartphone. 
+
+We use LED and light sensor to implement light communication between smartphone and sensor node. On the other hand, because light from Smartphone flashlight and sensor node's LED are only active on small area, we can send data safely in home, a private environment. Therefore we can provide simple interactions for exchanging one-time security key between smartphone and sensor nodes by light communication such as touch new sensor node with smartphone's accessory and setup multi new sensor nodes at same time with blink flashlight interaction. With this key, we can encrypt setup data which is sent over wireless communication and decrypt data for setup process. With this order, users can add new sensor nodes securely more simply, therefore making a secured WSN by themselves.
+
+We implemented HUSTLE with SunSPOT sensor node and Google Nexus S smartphone. We also evaluate HUSTLE by comparing with base method which selects exactly new sensor nodes and input secure code of new sensor node method. The results of evaluation (Table \ref{table:evaluation_succinct_result}) shows that HUSTLE is simpler and faster than base method about six times. This also shows the effectiveness of using HUSTLE instead of base method. In HUSTLE, users only have to touch or direct light to new new sensor nodes, therefore receiving high score with "Simple to use", "Useful", "Easy to learn" item ( [ 3.30, 3.50, 3.45] and [ 3.80, 3.55, 3.85] instead of [ 2.10, 2.40, 2.90] in base method). In addition feedback information is shown directly on Smartphone screen and users find it easier to solve occurred problem when adding new sensor nodes.
+\section{Future Works}\label{sec:conc_future}
+
+We discuss the future work of HUSTLE in this section. 
+
+The first, we implemented HUSTLE in SunSPOT sensor nodes, and however this is only one type of sensor nodes, and we have a lot of other kinds of sensor nodes, which are used nowadays. With this reason, we want to provide HUSTLE not only for SunSPOT, but also for other types of sensor nodes such as mote, Tmote, iSense (Table \ref{tab:sensornode_hardware}). And in some application we need some type of sensor nodes such as secure application, therefore in the future we want to apply HUSTLE with a secured WSN with some type of sensor nodes.
+
+The second, through the evaluation, we confirmed that light communication is still too slow, and it take a long time to send a longer security key with lower accuracy. With this reason we also need to improve light communication speed also accuracy.
+
+The last but not the least, from evaluation of some participants we learn some problems with touch interfaces because it needs a accessory. And only one sensor node can be added at once, then it take more time to make a WSN. Therefore in future, we consider using smartphone's camera to read signal from sensor node's LED instead of a accessory. We can add multi new sensor node at once without any external hardware.
+
+

@@ -1,0 +1,362 @@
+\chapter{Evaluation of HUSTLE}\label{chap:evaluation}
+In this chapter, we present the evaluation of HUSTLE. Firstly, we explain the purpose of the evaluation. Secondly, methodology of evaluation, comparison targets and evaluation items are explained in detail. Next, we show the result of the evaluation in terms of evaluation items for each comparison target. Finally, we summarize this chapter.
+\clearpage
+\section{Purposes of the Evaluation}\label{sec:evaluation_purpose}
+
+The ultimate goal of HUSTLE is to reduce time to deploy a secured WSN. Therefore, we need to check the ability of HUSTLE when making a new secured WSN or when adding new sensor nodes and comparing with base method. On the other hand, the accuracy of adding process also becomes important, otherwise users need a lot of times to add new sensor nodes. We also check the accuracy of HUSTLE when adding new sensor nodes. 
+
+The other goal of HUSTLE is to provide a friendly and intuitive interaction for deploying a secured WSN. Thus, throughout the evaluation about the ability of HUSTLE, we also take a questionnaire about HUSTLE and base method.
+
+Lastly, speed and accuracy of light communication also affect to add new sensor nodes and make a WSN, so we also evaluate light communication in some environments, indoor with different light conditions.
+\section{Evaluation Methodology}\label{sec:evaluation_methodology}
+
+We describe the evaluate environments in the first subsection. In others, we also describe comparison target and evaluation items in next subsection.
+%This section describes the methodology of our evaluation. The overview of methodology is described, followed by the comparison targets and evaluation items.
+\subsection{Evaluation Environment}\label{sec:evaluation_methodology_env}
+
+This part shows the evaluation environment. The specific of hardware and software is shown in Table \ref{tab:evaluation_environment}. We implemented HUSTLE on SunSpot Java Development Kits with the latest version of SunSpot SDK,yellow-101117-1 version. SunSpot sensor node has ARM920T CPU with 512KB RAM and 4M Flash. SunSpot is also equipped 2.4 GHz IEEE 802.15.4 radio communication, light sensor, 8 tri-color LED. We used Samsung Galaxy Nexus S Smartphone with Android SDK version 4.1. Nexus S Smartphone has 1GHz ARM Cortex A8 CPU with 512 MB of RAM, 16GB of NAND memory. Nexus S also has a camera with an LED flashlight and a touch screen.
+
+\begin{table}[h]
+\caption{Evaluation environment}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Operating system& Mac OSX 10.7\\
+\hline
+SunSpot SDK&Yellow-101117-1\\
+\hline
+Android SDK&4.1\\
+\hline
+\hline
+Platform&SunSpot Java Development Kits\\
+\hline
+CPU&ARM920T\\
+\hline
+Memory&512KB\\
+\hline
+Radio&2.4 GHz IEEE 802.15.4\\
+\hline
+Equipment& Light sensor, 8 tri-color LED\\
+\hline
+\hline
+Platform&Samsung Galaxy Nexus S\\
+\hline
+CPU&1GHz ARM Cortex A8\\
+\hline
+Memory&512MB\\
+\hline
+Equipment& LED flashlight, touch screen\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:evaluation_environment}
+\end{table}%
+
+In our evaluation,we used 10 SunSpot sensor nodes as new sensor nodes with one base-station of SunSpot Java Development Kits as sink node. The sink node is connected to a personal computer through a USB connection.
+
+All sensor nodes are installed with sensor node version of HUSTLE program. Sink node and smartphone are also installed with HUSTLE program according the sink node version and the smartphone version.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{image/eps/evaluation_environment.eps}
+\caption{Evaluation: light conditions}
+\label{fig:evaluation_environment}
+\end{figure}
+
+All evaluations is performed at indoor with some light condition like Picture \ref{fig:evaluation_environment}.
+
+\subsection{Comparison Targets}\label{sec:evaluation_methodology_target}
+
+This section explains comparison targets of the evaluation, base method based on input security key manually and HUSTLE.
+
+{\bf Base method:} In this method to add a new sensor node, users have to turn on it, input identification and hexadecimal security key of the new sensor node to sink node. After that, by using the security key, sink node can encrypt the setup data and send it to the sensor node safely. Lastly, sensor node decrypts received data, set-up with decrypted data and sensor node is a part of WSN.
+
+{\bf HUSTLE:} In HUSTLE, we provide friendly interactions, faster method to deploy and maintain security of WSN with low cost. Firstly, users use their smartphone with HUSTLE application and login to them WSN management by IP address and security key. After that, to add new sensor nodes, users only have to turn on it and use the smartphone to set-up new sensor nodes. Depending on hardware of sensor node, we have difference way to set-up it. In case new sensor nodes has a light sensor, simply turn on all of it, put it on the table and direct flashlight of Smartphone into it, press "Send" button and all of new sensor nodes is added automatically. Others case, new sensor nodes have an LED, users turn on each sensor node, touch it with the accessory of smartphone, and the new sensor node will be added automatically.
+\subsection{Evaluation Items}\label{sec:evaluation_methodology_items}
+
+In this section, we explain the evaluation items. Firstly, we evaluate light communication speed, accuracy with some value of time unit in-door with common light condition, it is fluorescent lamp. Secondly, we evaluate length of time to deploy a secured WSN, its accuracy when adding new sensor nodes and taking questionnaire.
+\begin{itemize}
+\item Speed and accuracy of light communication: Light communication is used to exchange security key between sensor nodes and smartphone. Thus its speed and accuracy affect to performance of adding new node process. We can avoid error with higher accuracy light communication and make adding method become more effective. As the result, we can make a WSN faster. So as to measure speed and accuracy of light communication, we use it to send a fixed size of random data and measure length of time with some values of time unit and $n$ (for simple, we set $n_1$ and $n_2$ is $2n$ and $3n$). We evaluate in common light condition of the indoor environment, fluorescent lamp. Lastly, we can use evaluated results to select the best parameters of light communication such as time unit and $n$.
+\item Adding new sensor nodes accuracy: Adding accuracy is an important item. We can reduce errors of sensor nodes when deploying a WSN at a higher rate accuracy. In addition, we can make set-up method faster, one of the goals of HUSTLE. We try to add a new sensor node with touch interaction in 100 times with the fluorescent lamp condition, because touch interaction does not depend on light condition. We also evaluate it with some indoor conditions (Figure \ref{fig:evaluation_environment}) by adding from 1 new sensor node case to 10 sensor nodes case at one-time, each case is looped in 10 times with blink interaction.
+\item Time length to make a secured WSN: One of the goals of this research is to make a secured WSN faster. Thus, we ask 20 participants to evaluate HUSTLE and base method. We measure the time length of each participant when setting-up a new WSN with 10 sensor nodes in the fluorescent lamp environment.
+\item Evaluation of users: We also need the evaluation of participants because the setup method is used by end-users. Therefore, after the participants finished deploying the WSN, we also asked participants to fill out a questionnaire survey about each method with following questions: Was it simple to deploy? Was it useful? Was it tiring to deploy? Was it simple to learn? Was it easy to fix in case of errors? (Max score of each question is 4).
+\end{itemize}
+
+\section{Evaluation Results}\label{sec:evaluation_result}
+In this section, we present the results of the evaluation. At first, we show the succinct results, then we discuss the results of four evaluation items in details. 
+
+\subsection{Succinctly results}
+\begin{table}[htdp]
+\caption{Succinctly result of evaluation}
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&&Base method&HUSTLE.1 \footnote{Touch interaction} &HUSTLE.2 \footnote{Blink interaction} \\
+\hline
+\hline
+\multirow{4}{*}{Adding accuracy}&Fluorescent lamp &&80.8\%\footnote{Without resend in light communication}&73.64\%\\
+						&Incandescent lamp &&&71.09\%\\
+						&Low sunshine&&&31.82\%\\
+						&Low brightness&&&78.55\%\\
+\hline		
+\multirow{1}{*}{Make a WSN}&Time length&596.5s&201.1s&93.3s\\
+					     &Simply&2.15&3.30&3.80\\
+					     &Useful&2.40&3.50&3.55\\
+					     &Tire\footnote{Smaller is better}&3.55&1.60&1.45\\
+					     &Learnable&2.85&3.45&3.85\\
+					     &Fix errors&2.30&3.25&3.10\\
+\hline
+\end{tabular}
+\end{minipage}
+\end{center}
+\label{table:evaluation_succinct_result}
+\end{table}%
+
+We show the succinct result of evaluation in Table \ref{table:evaluation_succinct_result}. From this result, we can know that HUSTLE with blink interaction is 6.5 times faster than base method and touch interaction is 3 times faster than base method when deploying a new WSN with 10 sensor nodes. All of the participants evaluated that HUSTLE is better than base method, simplier, more useful, less tiring, easy to learn and easy to fix errors.
+
+\subsection{Speed and accuracy of light communication}
+
+We evaluated speed and accuracy of light communication by sending 8bytes data in in-door environments. We used both light communication case, (sensor node's LED - Smartphone's accessory) and (Smartphone's flashlight - sensor node's light sensor) with some different parameters (time unit, $n$, $n_1$ and $n_2$). We tested them in a common indoor environment which is the fluorescent lamp condition.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{graph/eps/evaluation_accuracy_speed.eps}
+\caption{Speed and accuracy with smartphone's flashlight: fluorescent lamp}
+\label{fig:evaluation_speed_accuracy1_flu}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{graph/eps/evaluation_accuracy_speed_LED_photocell.eps}
+\caption{Speed and accuracy with sensor node's LED}
+\label{fig:evaluation_speed_accuracy2}
+\end{figure}
+
+The results are shown in Figure \ref{fig:evaluation_speed_accuracy1_flu} and Figure \ref{fig:evaluation_speed_accuracy2}. We can see that, the accuracy increases with lower time unit. 
+
+In common case fluorescent lamp, with time unit is $10\mu$s, the accuracy changed form 50\% to 80\% with only changing N from 4 to 5. The reason can be seen from Figure \ref{fig:hustle_period_measure} in Chapter HUSTLE \ref{chap:hustle}. Because we do not have stability of flashlight with very short light period. For instance: $10\mu$s the range of received period is from $7\mu$s to $32\mu$s, with $40\mu$s, the range is form $30\mu$s to $55\mu$s. This makes a lot of wrong patterns when sending the number of light patterns. In case   of increasing N to 5, we have the range of $50\mu$s is from $45\mu$s to $63\mu$s, then we can decrease the number of wrong patterns and get higher accuracy. Because fluorescent lamp is common light condition in home environment, we configure light communication bases on fluorescent lamp condition. From Figure \ref{fig:evaluation_speed_accuracy1_flu}, we can chose time unit is 10ms and the value of $n$ is 6. With this value, light communication have balance between speed (21.6bps) and accuracy (93.3\%).
+
+In sensor node's LED case (Figure \ref{fig:evaluation_speed_accuracy2}), with same reasons we have very low accuracy with short time unit, we have a problem when detecting some continue blink periods such as (ON-OFF-ON is detected to ON-ON-ON). Therefore, we chose time unit is 12.8ms and N is 1.57, with this value, we have high speed with high accuracy.
+
+\subsection{Accuracy when adding new sensor nodes}
+
+We measure this item by adding new sensor nodes in some cases with both types of interactions, touch and blink flashlight.
+
+\subsubsection{Touch Interaction}
+
+\begin{table}[htdp]
+\caption{Accuracy when adding new nodes with touch interaction}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Required times&$1$&$2$&$\>2$\\
+\hline
+Number&32&10&0\\
+\hline
+Percentage&76.2\%&23.8\%&0\%\\
+\hline
+\end{tabular}
+\end{center}
+\label{table:evaluation_new_sensor_led}
+\end{table}%
+
+In case touch interaction is used, we show the result at Table \ref{table:evaluation_new_sensor_led}. When we try to add new sensor node by touching Smartphone-accessory, we can add it immediately without any errors in 76.2\% case. In comparison with other cases, it takes only two times using light communication with one error of light communication and one success of light communication.
+
+Sometimes we need two times to add a new sensor nodes because of the error of light communication. For speeding up, we make a light pattern with shorter period blink light, so we receive some strange periods which difficult to determine 0 or 1 bit. On the other hand, we have different accuracy when compare light communication. We think that the reason of this problem is differ from among sensor nodes. In speed and accuracy evaluation of light communication, we evaluated it with only one sensor node, but in adding new node accuracy evaluation we used some different sensor nodes.
+
+\begin{table}[htdp]
+\caption{{Adding new nodes with blink flashlight interaction: fluorescent lamp}}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Case/Added	& 0 & 1 & 2 & 3 & 4 &5 &6 & 7 & 8 & 9& 10 & Avg \\
+\hline
+1 Node 								& 1 & 9&&&&&&&&&&0.9\\
+\hline
+2 Nodes								& 0 & 2 & 8&&&&&&&&&1.8\\
+\hline
+3 Nodes								& 0 & 0 & 1 & 9&&&&&&&&2.9\\
+\hline
+4 Nodes								& 1 & 0 & 0 & 1 & 8&&&&&&&3.5\\
+\hline
+5 Nodes								& 0 & 0 & 0 & 0 & 2 & 8&&&&&&4.8\\  
+\hline
+6 Nodes								& 0 & 0 & 0 & 0 & 1 & 3 & 6&&&&&5.5\\
+\hline
+7 Nodes								& 1 & 0 & 0 & 0 & 0 & 3 & 4 & 2&&&&5.3\\
+\hline
+8 Nodes								& 0 & 0 & 0 & 1 & 3 & 2 & 3 & 1 & 0&&&5\\
+\hline
+9 Nodes								& 2 & 0 & 0 & 0 & 2 & 2 & 2 & 2 & 0 &0&&4.4\\
+\hline
+10 Nodes								& 0 & 0 & 0 & 0 & 0 & 3 & 1 & 5 & 1 &0 & 0&6.4\\
+\hline
+\end{tabular}
+\end{center}
+\label{table:evaluation_new_node_flash_flu}
+\end{table}%
+
+\begin{table}[htdp]
+\caption{{Adding new nodes with blink flashlight interaction: incandescent lamp}}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Case/Added	& 0 & 1 & 2 & 3 & 4 &5 &6 & 7 & 8 & 9& 10 & Avg \\
+\hline
+1 Node 								& 1 & 10&&&&&&&&&&1\\
+\hline
+2 Nodes								& 0 & 1 & 9&&&&&&&&&1.9\\
+\hline
+3 Nodes								& 0 & 1 & 3 & 6&&&&&&&&2.5\\
+\hline
+4 Nodes								& 0 & 0 & 0 & 2 & 8&&&&&&&3.8\\
+\hline
+5 Nodes								& 0 & 0 & 0 & 0 & 5 & 5&&&&&&4.5\\  
+\hline
+6 Nodes								& 0 & 0 & 0 & 0 & 1 & 7 & 2&&&&&5.1\\
+\hline
+7 Nodes								& 0 & 0 & 0 & 0 & 1 & 4 & 5 & 0&&&&5.4\\
+\hline
+8 Nodes								& 0 & 0 & 0 & 0 & 0 & 2 & 3 & 0 & 0&&&4.9\\
+\hline
+9 Nodes								& 1 & 0 & 1 & 2 & 2 & 2 & 1 & 0 & 0 &0&&3.7\\
+\hline
+10 Nodes								& 0 & 0 & 0 & 0 & 0 & 3 & 3 & 5 & 0 &0 & 0 &6.9\\
+\hline
+\end{tabular}
+\end{center}
+\label{table:evaluation_new_node_flash_inc}
+\end{table}%
+
+\begin{table}[htdp]
+\caption{{Adding new nodes with blink flashlight interaction: low sunshine}}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Case/Added	& 0 & 1 & 2 & 3 & 4 &5 &6 & 7 & 8 & 9& 10 & Avg \\
+\hline
+1 Node 								& 3 & 7&&&&&&&&&&0.7\\
+\hline
+2 Nodes								& 0 & 4 & 6&&&&&&&&&1.6\\
+\hline
+3 Nodes								& 0 & 4 & 4 & 2&&&&&&&&1.8\\
+\hline
+4 Nodes								& 2 & 0 & 2 & 6 & 0&&&&&&&2.2\\
+\hline
+5 Nodes								& 1 & 1 & 4 & 2 & 2 & 0&&&&&&2.3\\  
+\hline
+6 Nodes								& 0 & 1 & 4 & 4 & 1 & 0 & 0&&&&&2.5\\
+\hline
+7 Nodes								& 2 & 2 & 2 & 2 & 2 & 0 & 0 & 0&&&&2\\
+\hline
+8 Nodes								& 3 & 1 & 4 & 3 & 0 & 0 & 0 & 0 & 0&&&1.6\\
+\hline
+9 Nodes								& 3 & 2 & 2 & 3 & 0 & 0 & 0 & 0 & 0 &0&&1.5\\
+\hline
+10 Nodes								& 3 & 3 & 2 & 2 & 0 & 0 & 0 & 0 & 0 &0 & 0&1.3\\
+\hline
+\end{tabular}
+\end{center}
+\label{table:evaluation_new_node_flash_sun}
+\end{table}%
+
+\begin{table}[htdp]
+\caption{{Adding new nodes with blink flashlight interaction: low brightness}}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Case/Added	& 0 & 1 & 2 & 3 & 4 &5 &6 & 7 & 8 & 9& 10 &Avg\\
+\hline
+1 Node 								& 1 & 9&&&&&&&&&&0.9\\
+\hline
+2 Nodes								& 0 & 1 & 9&&&&&&&&&1.9\\
+\hline
+3 Nodes								& 0 & 0 & 0 & 10&&&&&&&&3\\
+\hline
+4 Nodes								& 0 & 0 & 0 & 1 & 2&&&&&&&3.9\\
+\hline
+5 Nodes								& 1 & 1 & 0 & 1 & 2 & 5&&&&&&3.7\\  
+\hline
+6 Nodes								& 2 & 0 & 1 & 0 & 0 & 4 & 3&&&&&4\\
+\hline
+7 Nodes								& 0 & 0 & 0 & 0 & 1 & 3 & 4 & 4&&&&6.1\\
+\hline
+8 Nodes								& 0 & 0 & 0 & 0 & 0 & 1 & 1 & 6 & 2&&&6.9\\
+\hline
+9 Nodes								& 1 & 0 & 0 & 0 & 1 & 3 & 3 & 0 & 2 &0&&5.3\\
+\hline
+10 Nodes								& 0 & 0 & 0 & 0 & 0 & 0 & 1 & 4 & 3 &1 & 0&7.9\\
+\hline
+\end{tabular}
+\end{center}
+\label{table:evaluation_new_node_flash_brig}
+\end{table}%
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{graph/eps/evaluation_accuracy_multi_sensornode.eps}
+\caption{Adding percentage with blink interaction}
+\label{fig:evaluation_accuracy_blink_some}
+\end{figure}
+
+\subsubsection{Blink Interaction}
+
+Table \ref{table:evaluation_new_node_flash_flu} \ref{table:evaluation_new_node_flash_inc} \ref{table:evaluation_new_node_flash_sun} \ref{table:evaluation_new_node_flash_brig} and Figure \ref{fig:evaluation_accuracy_blink_some} show the results in case blink interactions is used. We tested it by adding from 1 new sensor node case to 10 sensor nodes case at one-time, each case is looped in 10 times.
+
+When comparing with low brightness case and incandescent lamp case, we can see that the average number of added sensor nodes in each case is decreases if we change from low brightness environment to incandescent. This make light sensor difficult to distinct light from the flashlight and light from the environment. Especially in a sunshine environment (Table \ref{table:evaluation_new_node_flash_sun} and Figure \ref{fig:evaluation_accuracy_blink_some}), the accuracy is increases at a high rate with more sensor nodes. In comparison with others condition such as low light, fluorescent, or incandescent, we received very low accuracy in low sunshine environment case.
+
+In addition, we also have a problem when adding too many sensor nodes. For example, in Table \ref{table:evaluation_new_node_flash_flu} with 10 sensor nodes case, 30\% test can only add 5 nodes, and 50\% test can only add 7 nodes. This is because of the limitation of the range of smartphone's flashlight. With more sensor nodes, we need a larger space. In order to enlarge the range of flashlight we have to take smartphone farther, so it also makes the light signal more weak (signal strength is calculated from: $I=\frac{C}{d^2}$) and harder to handle. Another reason is with many sensor nodes, sometimes we cannot send and receive a packet in case of a lot of packets are sent in a short time. We try to solve it by setting random waiting time in each sensor node, but this problem still occurs, such as in 9 sensor nodes case.
+
+Another reason of low accuracy is usage of users. For best result, flashlight needs to be directed to all sensor nodes with as strong as light possible, but each user has each different usage, then sensor nodes received different light signals strength in every time.
+
+From all results, we can conclude that 4 sensor nodes is the best case. We can direct flashlight to all 4 sensor nodes with strong signals.
+
+\subsection{Time length to make a secured WSN}
+
+For evaluating usability of HUSTLE, we asked 10 participants to evaluate the performance of HUSTLE, and compared with base method. With base method, participants have to select true sensor nodes from the list and input security key of this sensor node. We measure the time length when each user sets-up a WSN with 10 sensor nodes in common indoor condition, fluorescent lamp.
+
+\begin{figure}[t] 
+\begin{center}
+\includegraphics[width=0.9\textwidth]{graph/eps/evaluation_base_hustle.eps}
+\caption{ Setting-up time length}
+\label{fig:evaluation_time_length}
+\end{center}
+\end{figure}
+
+Firstly, we can see the big difference of time length in base method. The reason is difference among participants, someone can input security code faster and feel familiar with hexadecimal.
+
+From Figure \ref{fig:evaluation_time_length}, we can see HUSTLE with blink interaction is about 6.5 times faster than base method (93.3s and 596.2s). The reason is with HUSTLE users only have to use Smartphone to shine to all sensor nodes, this is very simple to perform.
+
+To add a new sensor node, participants have to select true sensor node and input the security key of each sensor node. This task takes lots of time to perform. In touch interaction, we only add one sensor node at once, so HUSTLE with touch interaction is slower than blink flashlight interaction. However it still  3 times faster than base method (202.1s and 596.5s).
+
+\subsection{Evaluation of users}
+
+We also asked participants to fill out a questionnaire survey about each method with following questions: Was it simple to deploy? Was it useful? Was it tiring to deploy (lower is better)? Was it simple to learn? Was it simple to fix in case of errors? (Max score is 4). The results are shown in Table \ref{tab:evaluation_result_score}.
+
+\begin{table}[htdp]
+\centering
+\caption{ Average question score}
+\begin{tabular}{ | c | c | c | c | c | c|}
+ \hline
+ &Simply & Useful & Tiring & Learnable & Fixes errors \\
+ \hline
+ Base method & 2.15 & 2.40 & 3.25 & 2.85 & 2.30 \\
+ \hline
+ HUSTLE(Touch Interaction) & 3.30 & 3.50 & 1.60 & 3.45 & 3.25 \\
+ \hline
+ HUSTLE(Blink Interaction) & 3.80 & 3.55 & 1.45 & 3.85 & 3.10 \\
+ \hline
+\end{tabular}
+\label{tab:evaluation_result_score}
+\end{table}
+
+In Table \ref{tab:evaluation_result_score}, all participants evaluated good results about HUSTLE. In HUSTLE with blink interaction, we can make WSN through simple interaction, so it has (3.30/4 and 3.80/4) point with Simply and (3.50/4 and 3.55/4) with Useful. In HUSTLE with blink interaction, one-time security key is sent automatically to all sensor nodes and also can check received data by checking checksum byte. Therefore it avoids wrong security key problem which usually happens with base method. Thus, HUSTLE with blink interaction got (1.60/4 and 1.45/4) point with Tire instead of 3.25/4 of base method (With Tiring, lower score is better).
+
+In Learnable and Fix errors question, almost participants evaluated HUSTLE with blink interaction well with (3.45/4 and 3.85/4) point of Learnable and (3.25/4 and 3.10/4) of Fixes error. Therefore we can say that HUSTLE can be easily applied with current WSN.
+
+Almost participants commented that HUSTLE can make a WSN easier, faster. On the other hand, some people also said that HUST with blink interaction is better than touch interaction: they need less time and less interaction. As the result, HUSTLE with touch interaction received slower score in all questions (Table \ref{tab:evaluation_result_score}).
+
+\section{Summary}\label{sec:evaluation_summary}
+
+In this section we summarize this chapter. First we introduced the purpose of evaluation: checking performance of HUSTLE and its usability. We discussed about the methodology of evaluation in the next section, about the environment and compare targets. Next, we described evaluation items, which is taken from the purposes of evaluation. They are: speed and accuracy of light communication, accuracy of adding new nodes, time length for deploying a secured WSN and evaluation of users. Finally, we have shown the results of evaluation in each evaluation item. From this results, we can see that HUSTLE is faster, simpler than base method. And with this result, we can say that HUSTLE can be applied with current WSN.

@@ -1,0 +1,158 @@
+%\documentstyle[sty/eclepsf, epsbox, ascmac, 12pt, sty/wakizono]{cls/harureport}
+%\documentclass[12pt,a4j]{article}
+%\documentclass[12pt,a4j]{cls/report}
+\documentclass[12pt,a4j]{report}
+\usepackage[dvipdfm,bookmarks=true,bookmarksnumbered=true,bookmarkstype=toc]{hyperref}
+%\documentstyle[sty/eclepsf, sty/epsbox, ascmac, 12pt, sty/wakizono]{cls/harureport}
+%\documentclass[12pt,a4j]{article}
+%\usepackage[sty/eclepsf]
+%\usepackage[sty/ascmac]
+%\usepackage[sty/ascmac]{cls/report}
+%\usepackage[dvips]{graphicx}
+\usepackage[dvips]{graphicx,color}
+ \graphicspath{{/Users/cpsf/Dropbox/CPSF/4Year/project/picture/}}
+\usepackage{verbatim}
+%\usepackage{fancybx}
+\usepackage{footnote}
+\usepackage{jtygm}
+\usepackage{multirow}
+\usepackage{ascmac}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{url}
+%\usepackage{nidanfloat}
+\usepackage[american]{babel}
+\usepackage[tight]{subfigure}
+
+\usepackage{amsmath}
+
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\lstset{language=Java,
+basicstyle=\small\sffamily,
+numbers=left,
+numberstyle=\tiny,
+frame=tb,
+columns=fullflexible,
+showstringspaces=false,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/}
+}
+
+\topmargin=0cm
+\headheight=0cm
+\topskip=0cm
+\textheight=22cm
+\evensidemargin=0.2cm
+\oddsidemargin=0.2cm
+\textwidth=16.5cm
+\columnsep=0.8cm
+
+\begin{document}
+
+\thispagestyle{empty}
+\parindent=1pt
+
+\begin{center}
+
+%\vspace{30mm}
+\vspace{30mm}
+{\Large\bf HUSTLE:}\\ 
+{\Large\bf Deploying A Secured Wireless Sensor Network}\\ 
+%HUSTLE: Deploying A Secure Wireless Sensor Network 
+%by Light Communication with Smartphone\vspace{5mm}
+{\Large\bf by Light Communication with Smartphone}\\
+\vspace{3mm}
+%\vspace{3mm}
+
+%\vspace{2cm}
+\vspace{10mm}
+
+{\LARGE Nguyen Trung Duc}\\
+%\vspace{2cm}
+\vspace{10mm}
+{\Large Faculty of Environment and Information Studies}\\
+\vspace{5mm}
+{\LARGE Keio University}\\
+\vspace{5mm}
+{\Large 5322 Endo Fujisawa Kanagawa 252-8520}
+{\Large JAPAN}\\
+%\vspace{2cm}
+\vspace{10mm}
+
+{\Large\it  Submitted in partial fulfillment of the requirements} \\
+\vspace{3mm}
+{\Large\it  for the degree of Bachelor}\\
+
+%\vspace{2cm}
+\vspace{12mm}
+
+\textbf{{\Large Advisors:}}\\
+\vspace{5mm}
+{\Large Professor Hideyuki Tokuda}\\
+\vspace{2mm}
+{\Large Professor Jun Murai}\\
+\vspace{2mm}
+{\Large Associate Professor Hiroyuki Kusumoto}\\
+\vspace{2mm}
+{\Large Professor Osamu Nakamura}\\
+\vspace{2mm}
+{\Large Associate Professor Kazunori Takashio}\\
+\vspace{2mm}
+{\Large Assistant Professor Rodney D. Van Meter III}\\
+\vspace{2mm}
+{\Large Associate Professor Keisuke Uehara}\\
+\vspace{2mm}
+{\Large Associate Professor Jin Mitsugi}\\
+\vspace{2mm}
+{\Large Lecturer Jin Nakazawa}\\
+\vspace{2mm}
+{\Large Professor Keiji Takeda}\\
+
+%\vspace{1.5cm}
+\vspace{12mm}
+
+{\large Copyright\copyright  2013 Nguyen Doan Minh Giang}
+
+\end{center}
+
+\newpage
+
+\pagestyle{plain}
+\baselineskip=9mm
+\pagenumbering{roman}
+
+%\input{contents/abstract}
+\tableofcontents
+\listoftables
+\listoffigures
+
+\newpage
+
+%\renewcommand{\thepage}{--- \arabic{page} ---}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{contents/intro}
+\input{contents/background}
+\input{contents/related}
+\input{contents/HUSTLE}
+\input{contents/implementation}
+\input{contents/evaluation}
+\input{contents/conclution}
+\input{contents/ack}
+%\input{contents/pub}
+\bibliographystyle{ieeetr}
+\bibliography{bachelor_thesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\ \
+\end{document}
+
