@@ -1,0 +1,65 @@
+\chapter{Food's Feature-Ingredient Extraction Algorithm}\label{chap:hustle}
+
+In this section, we propose an algorithm for analyzing the dominant materials which are often used in a region. We define a material in a region to be a featured one if it appears many times with a large amount and be unique among recipes in that region. To evaluate whether it is featured or not, we suppose that the following questions should be answered: ``How often, how much, and how unique the material is?''. Respectively, we propose three kind of functions to answer these questions. They have the key role of the metrics for the featured ingredient's evaluation.  
+
+\section{Ingredient Frequency}
+
+The first function named $IF$ (Ingredient Frequency) is used to treat the question ``How often does the material appear in a region?''. The higher frequency an ingredient appears in a region, the higher possibility it is the region's featured ingredient. In each recipe, an ingredient only appears one time. Thus, the time that ingredient appears in the region is the number of the recipes in the region has it as ingredient. Because the database we have from the Internet are often unbalanced, there are some regions that have more recipes than others. Thus to make it indenpendent from the database, we prefer to use the ingredient's frequency rather than its appearance times. This function is formed by the number of times the ingredient appears in the region's recipes over the number of total recipes in that region.
+
+Let $R$ be the set of all recipes ($r$) in a region and $i$ be an ingredient which appears in the region. The function is formed as follows:
+\begin{center}
+\smallskip
+$ IF(i,R)= \frac{\displaystyle | \{i | i \in r, r \in R \} | }{\displaystyle | R | }$
+\smallskip
+\end{center}
+
+
+Becaue the $IF$ value is the ingredient's frequency, it takes the value between 0 and 1.
+
+\section{Ingredient Amount}
+
+The ingredient's frequency has little meaning if there is a small amount of it in the recipes. Thus, the taste of a food not only depends on the ingredients, but also the amount of the ingredients. Even when an ingredient has a high value of $IF$, it might not be the region's featured ingredient. Thus, the second function, $IA$, is proposed for the question ``How much?''
+
+Let $r$ be a recipe in the set of recipes $S$ and ingredient $i$ is in $r$. 
+We define the mean function $M(i,S)$ be the mean amount of $i$ in $S$ as follows: 
+\begin{center}
+\smallskip
+$M(i,S)= \frac{\displaystyle \sum_{}^{i \in r, r \in S} amount(i,r)}{\displaystyle |\{i|i \in r, r \in S\}|}$
+\smallskip
+\end{center}
+
+in which $amount(i,r)$ is the amount of ingredient $i$ in recipe $r$.
+
+We also assume that $AR$ is the set of all recipes in the country regardless of the region it belongs to, while $R$ is the set of all recipes just in a specific region. Thus, $M(i,R)$ calculates the mean amount of ingredient $i$ in the region's recipes ($R$) while $M(i,AR)$ calculate the mean amout of ingredient $i$ in all the country's recipes ($AR$). We have the $IA$ function as follows:
+\begin{center}
+\smallskip
+$IA(i,R)= \frac{\displaystyle M(i,R)}{\displaystyle M(i,AR)}$
+\smallskip
+\end{center}
+
+
+Because the $IA$ function calculates the mean of ingredient's amount, it is independent to the frequency of that ingredient. The higher $IA$ value is, the higher possibility it is the region's featured ingredient. Because both numerator and denominator in the formula have the same unit, the $IA$ value is non-unit. Therefore, regardless to the variety of the ingredient's unit, we have a stable metric for evaluating the ingredient's amount.
+
+\section{Ingredient Unique}
+
+The $IF$ and $IA$ functions above might tell us how often an ingredient appears in the region, but this ingredient can often appear in many regions. To be a featured ingredient of a region, the ingredient must satisfy the condition that it appears in the region but doesn't appear in many other regions. We propose the third function $IU$ as follows: 
+\begin{center}
+\smallskip
+$IU(i,A)=  \log{\displaystyle \frac{\displaystyle |A|}{\displaystyle |\{i|i \in a, a \in A \}|}}$
+\smallskip
+\end{center}
+
+in which $i$ is the ingredient in region $a$ and $A$ is the set of regions.
+
+This function calculates the uniqueness of an ingredient among all the regions. The more often an ingredient appears in different regions the less unique it is. In other words, it is not the featured ingredient of the region. The higher $IU$ value corresponds to higher possibility it is the region's featured ingredient. We use the log scale to make sure the $IU$ values are not too big.
+
+\section{Featured Index}
+
+Featured Index, which is denoted by $FI$, is the index used to rank ingredients in a region in term of featured ingredient. We realize that these three functions are all proportional to the rank of the featured ingredient, thus we proposed $FI$ to be the production of these three function's values as follows.
+\begin{center}
+\smallskip
+$FI(i,R)= IF(i,R) \times IA(i,R) \times IU(i,A)$ 
+\smallskip
+\end{center}
+
+The $FI$ function returns the featured index of ingredient $i$ in a region which has a set of recipes $R$. $A$ is the set of all regions in the country. The ingredients which have the highest $FI$ would be the featured ingredients. On the other hands, the ingredients which have the lowest $FI$ would be considered as the common ingredients for every region.

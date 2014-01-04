@@ -1,217 +1,175 @@
 \chapter{Implementation of HUSTLE}\label{chap:implementation}
-%\section{introduction}\label{sec:implmentation_intro}
-In this chapter we describe the implementation of HUSTLE. Firstly, we discuss about hardware and software in HUSTLE. In the next section, we describe the implementation of each module. Lastly, we discuss interactions in HUSTLE and summary this chapter.
-\clearpage
-\section{Hardware and Software}\label{sec:implementation_hardware}
-To implement HUSTLE, we used Samsung Google Nexus S Smartphone, SunSpot Java Developer Kit that is shown in Figure \ref{fig:implement_hardware}. We used a photocell CDS 11mm MI11516 and a 3.5mm microphone jack as an accessory.
-The full specification of Nexus S and Sunspot Java Developer Kit is shown in Table \ref{tab:implement_specific_sunspot} and Table \ref{tab:implement_specific_nexus}.
+This section describes the recipe databse and experimental studies on this database by applying the featured ingredient analysis algorithm.  
 
-\begin{figure}[tb]
+\subsection{The Recipe Database}
+
+We build a recipe database in which recipes are grouped by region. A script written in Python crawls all the recipes from a Japanese cooking website~\cite{web:recipe}. We chose this website because the recipes are typical foods grouped by regions. The website is only for Japanese recipes, thus we now only have the database for Japanese foods. Each food is characterized by its name, the region it belongs to and its recipe. Each recipe is stored as a map collection in which the ingredient is the key and the couple of amount and unit is the value. Each of the recipes we get from the website is created for various amounts of people. For example, there are recipes for 4 people but there are also recipes for 3 people. Thus we need to normalize the ingredients' amount in each recipe for one person.
+
+\par There are about 200 recipes over 7 regions in Japan: Kanto, Hokkaido-Tohoku, Shikoku, Tyubu, Kyusyu-Okinawa, Kansai and Tyugoku. We calculate all the above functions for every recipe in Japan, but we only show the experimental results of Kanto and Shikoku within this paper. We chose these two regions because they lie far apart in different islands of Japan. The experimental results are discussed below. 
+
+\subsection{Ingredient Frequency}
+
+\begin{CJK}{UTF8}{min}
+
+Table~\ref{tab:IF} shows that there are some common ingredients which often appear in both Kanto and Shikoku regions such as Soy Sauce (しょうゆ), Sake (酒), Salt (塩),\ldots This is reasonable because we know that these ingredients are common in Japan. Because they often appear in other regions, the $IF$ function is not enough to evaluate the region's featured ingredients. However, it helps us partially understand the habit in using materials in regions. For example, Green onion (万能ねぎ) often appears in Shikoku but not in Kanto region and Sugar (砂糖) often appears in Kanto but not in Shikoku region. This leads us to the idea that typical Kanto foods are often sweeter than Shikoku foods. 
+
+\begin{table}
+
 \centering
-\includegraphics[width=0.9\textwidth]{image/eps/implement_hardware.eps}
-\caption{Implementation: Hardware}
-\label{fig:implement_hardware}
-\end{figure}
+\caption{Ingredient Frequency of Ingredients in Kanto region vs Shikoku region}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{\large Kanto region}} & \multicolumn{2}{|c|}{\textbf{\large Shikoku region}} \\
+\cline{1-4}
 
-\begin{table}[ptb]
-\caption{Specific hardware of SunSpot Sensor Node}
-\label{tab:implement_specific_sunspot}
-\begin{center}
-\begin{tabular}{|l|p{9cm}|}
-\hline
-\multirow{3}{*}{Processing} & 180 MHz 32 bit ARM920T core - 512K RAM - 4M Flash\\
-					 &2.4 GHz IEEE 802.15.4 radio with integrated antenna\\
-					 &AT91 timer chip\\ 
-\hline					  
-\multirow{7}{*}{Sensor Board}&2G/6G three-axis accelerometer\\
-						&Temperature sensor\\
-						&Light sensor\\
-						&8 tri-color LEDs\\
-						&6 analog inputs\\
-						&2 momentary switches\\
-						&5 general purpose I/O pins and 4 high current output pins\\
-\hline
-\multirow{7}{*}{Battery}&3.7V rechargeable 750 mAh lithium-ion battery\\
-					&30 uA deep sleep mode\\
-					&Automatic battery management provided by the software\\
-\hline
+\textbf{Ingredient} &\textbf{ IF} & \textbf{Ingredient} & \textbf{IF}\\ \hline
+Soy Sauce (醤油) 	& 1.00 & Soy Sauce (醤油) & 1.00 \\ \hline
+Miso (みそ)			& 0.9  &	 Salt (塩)	& 1.00  \\ \hline
+Sugar (砂糖) 			& 0.83 & Rice (米) & 0.83 \\ \hline
+Sake (酒)				& 0.83 & Sake (酒) & 0.67\\ \hline
+Salt 			& 0.67 & Green onion & 0.50\\
+(塩) & & (万能ねぎ) & \\ \hline
+\ldots &\ldots & \ldots & \ldots \\ \hline
+Dried bonito  			& 0.08 	& Kelp soup 	& 0.16  \\ 
+(かつお節) & & (ダシ昆布) & \\ \hline
+Pumpkin 			& 0.08 & Deep-fried Tofu 	& 0.16  \\ 
+(かぼちゃ)  & & (油揚げ) & \\ \hline
+Kamaage Shirashi  & 0.08 & Seared bonito  & 0.16  \\ 
+(釜揚げしらす)  & & (鰹の敲き) & \\\hline		
+
 \end{tabular}
-\end{center}
 
-\caption{Specific hardware of Samsung Galaxy Nexus S}
-\label{tab:implement_specific_nexus}
-\begin{center}
-\begin{tabular}{|l|p{12cm}|}
-\hline
-\multirow{3}{*}{Processing} & Samsung Exynos 3110\\
-					  &1 GHz ARM Cortex A8 based CPU core with a PowerVR SGX 540 GPU\\
-					  &512MB of RAM - 16GB of NAND memory\\ 
-\hline					  
-\multirow{1}{*}{Screen}&4.0 inch touch screen\\
-\hline
-\multirow{9}{*}{Data input}&3-axis gyroscope\\
-					&Accelerometer\\
-					&Ambient light sensor\\
-					&Capacitive touch-sensitive buttons\\
-					&Digital compass\\
-					&Microphone\\
-					&Multi-touch capacitive touchscreen\\
-					&Proximity sensor\\
-					&Push buttons\\		
-\hline
-\multirow{2}{*}{Camera}&5.0 megapixel rear camera with LED flash\\
-				    &VGA front camera\\
-\hline
-\end{tabular}
-\end{center}
+\label{tab:IF}
+\end{table}
 
-\end{table}%
+\end{CJK}
 
 
-With Nexus S Smartphone, we have a touch screen and a controllable flashlight. Nexus S is programmed by the Java language with Android SDK. In this time, we used Android SDK 4.1 to program it. Sunspot Java Developer Kit consist SunSpot sensor node and Base Station that is used as Sink Node. SunSPOT Java Developer Kit is also programmed by Java language with Sun SPOT SDK.
+\subsection{Ingredient Amount}
 
-We use SunSPOT sensor nodes to make a secured WSN with multi-hop routing protocol and Network-wide keys scheme\cite{Simplicio:2010:SKM:1862461.1862545} for secure protocol.
+\begin{CJK}{UTF8}{min}
 
-\section{Modules Implementation}
+\begin{table}
 
-This section describes implementation of each module in HUSTLE: user interface module, wireless communication module, controlling module, and light communication module.
-
-\subsection{User interface module}
-
-\begin{figure}[tb]
 \centering
-\includegraphics[width=0.9\textwidth]{image/eps/implementation_interface.eps}
-\caption{User interfaces}
-\label{fig:implementation_interface}
-\end{figure}
+\caption{Ingredient Amount of Ingredients in Kanto region vs Shikoku region}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{\large Kanto region}} & \multicolumn{2}{|c|}{\textbf{\large Shikoku region}} \\
+\cline{1-4}
 
-This module plays a role in interacting with users such as how to start sending or receiving data and how to feedback to users. The interfaces are shown in Picture \ref{fig:implementation_interface}. We have four screens: (a) logging screen, (b) receiving light data for touch interface, (c) sending data with flashlight for blink interface and (d) feedback screen. To begin with, users must to login with their accounts. After that, to add a new sensor node, users can use (b) or (c) (Picture \ref{fig:implementation_interface}) which depends on hardware of sensor node. Lastly, in order to feedback to users, we show a list of added sensor node's information such as its type and address like Picture \ref{fig:implementation_interface}(d). Picture (b) shows interface in case of adding a new sensor node with accessory. We show light signals and also show status of reading data process. In Picture (c), we show interface of adding processing by using the flashlight of smartphone. We also show capture of camera, which can help users know what sensor nodes will be added.
+\textbf{Ingredient} &	\textbf{IA} &\textbf{Ingredient} & \textbf{IA}\\ \hline
+White radish & 4.27 &  Shredded seaweed& 6.00 \\
+(大根)	& &  (刻みのり)  & \\ \hline
+Tempura flour 	& 3.20  & Carrot& 3.95 \\
+(天ぷら粉)  & &  (にんじん) & \\ \hline
+ Shredded seaweed 		& 3.00 & Tempura flour & 3.20\\
+(刻みのり) & &  (天ぷら粉)  & \\ \hline
+\ldots &\ldots & \ldots & \ldots \\ \hline
+Taro 	& 0.02& Sweet potato &0.06 \\ 
+ (里芋)	&  &  (さつまいも) & \\ \hline
+Cake flour	& 0.02& Chicken thigh&0.05\\ 
+ (薄力粉) & &  (鶏もも肉) & \\ \hline
+Field mustard	& 0.02& Sushi vinegar & 0.05\\
+ (菜の花)  & & (すし酢) & \\ \hline
 
-\subsection{Wireless communication module}
-This module is used to send data to others by using radio communication such as secure protocol data, routing data, or identification. This module receives commands from controlling module consist which and where data must be sent. In case address of destination is undefined, this module broadcasts the message to all sensor nodes.
-
-\subsection{Controlling module}
-
-\begin{table}[hp]
-\caption{Rule table of Smartphone}
-\label{tab:implement_rule_smartphone}
-\begin{center}
-\begin{tabular}{|p{5cm}|p{8cm}|}
-\hline
-Event&Action\\
-\hline
-{New light data}&{Send received key to Sink node}\\
-\hline
-{New added node information}&{Show it in screen}\\
-\hline
-{Push start button}& {Make a random security key and send it by flashlight}\\
-\hline
 \end{tabular}
-\end{center}
 
-\caption{Rule table of Sensor node with light sensor}
-\label{tab:implement_rule_node_sensor}
-\begin{center}
-\begin{tabular}{|p{5cm}|p{8cm}|}
-\hline
-Event&Action\\
-\hline
-{New light data}&{Save received key}\\
-\hline
-{New information from sink node}&{Decrypt by saved key and setup with this data, send hello message to sink node}\\
-\hline
-\end{tabular}
-\end{center}
+\label{tab:IA}
+\end{table} 
+ 
+Table~\ref{tab:IA} shows the result of the $IA$ value for Kanto and Shikoku region. We can see that most of the $IA$ values are around 1, which means there is not much difference in the way of using an ingredients' amount between Shikoku region and other regions. However, there are some interesting results. For example, in Kansai region, the mean amount of pepper (こしょう) is 11 times greater than the mean amount of total peper in Japan. See details in Table~\ref{tab:IAoutlier}. 
 
-\caption{Rule table of Sensor node with LED}
-\label{tab:implement_rule_node_led}
-\begin{center}
-\begin{tabular}{|p{5cm}|p{8cm}|}
-\hline
-Event&Action\\
-\hline
-{Started}&{Make and save a random security key and send it by LED}\\
-\hline
-{New information from sink node}&{Decrypt by saved key and setup with this data, send hello message to sink node}\\
-\hline
-\end{tabular}
-\end{center}
 
-\caption{Rule table of Sink node}
-\label{tab:implement_rule_sink}
-\begin{center}
-\begin{tabular}{|p{5cm}|p{8cm}|}
-\hline
-Event&Action\\
-\hline
-{New security key message}&{Encrypt setup data with this key and broadcast it without secure protocol}\\
-\hline
-{New hello message}&{Send this node information to Smartphone}\\
-\hline
-\end{tabular}
-\end{center}
 
-\end{table}%
 
-This module determines which data will be sent when having an event such as new light data and new radio data. Rules table of each device is shown in Table \ref{tab:implement_rule_smartphone} \ref{tab:implement_rule_node_sensor} \ref{tab:implement_rule_node_led} \ref{tab:implement_rule_sink}.
+\subsection{Ingredient Uniqueness}
+\begin{CJK}{UTF8}{min}
 
-\subsection{Light communication module}
-This module is the most important one in our research, so we describe it more specific.
-We split this module into 2 parts: encoding and decoding light pattern.
+Table~\ref{tab:IU} reflects the fact that the common ingredients such as Salt (塩), Sweet cooking wine (みりん), Ginger (しょうが), Soy sauce (しょうゆ) appear in almost every regions in Japan while the ingredients such as Peanut (落花生) and Chive (あさつき) are not too common and mostly appear in only one region. The ingredients which have the $IU$ value of 0 appear in every region.
 
-\subsubsection{Encoding Light Pattern}
 
-This part is very simple, it only get string bits of data and send the light pattern according bit value. The Java code of this part is shown in Listing\ref{code:send_light_pattern}.
-
-\lstinputlisting[label=code:send_light_pattern,caption=Encoding light pattern]{contents/source_code/send_light_pattern.java}
-
-\subsubsection{Decoding Light Pattern: light sensor of sensor node}
-
-As mentioned in the previous chapter (HUSLTE chapter), we have 3 steps: (1) getting light signals,(2) detecting period length time, (3) decoding period length time to light pattern and getting data. At first, we get light signals by using the light sensor at step (1) based on a window with size W\_LENGTH as Listing \ref{code:get_light_pattern} and Figure \ref{fig:hustle_one_window}.
-
-\begin{figure}
+\begin{table}
 \centering
-\includegraphics[width=0.9\textwidth]{graph/eps/hustle_one_window.eps}
-\caption{Decoding light pattern with light sensor: a window}
-\label{fig:hustle_one_window}
-\end{figure}
+\caption{Ingredient Amount of Ingredients in Tyubu region vs Kansai region}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{\large Tyubu region}} & \multicolumn{2}{|c|}{\textbf{\large Kansai region}} \\
+\cline{1-4}
 
-\lstinputlisting[label=code:get_light_pattern,caption=Light sensor case: read sensor data]{contents/source_code/get_light_signal.java}
+\textbf{Ingredient} &\textbf{ IA} & \textbf{Ingredient} & \textbf{IA}\\ \hline
+Pork loin 	&	25.50 	& Pepper 	&11.00\\ 
+ (豚ロース肉) & & (こしょう) & \\ \hline
+Seaweed 		&	6.00		& Sweet cooking wine 		&6.88\\ 
+(刻みのり) & & (みりん) & \\ \hline
+Green onion 	&	3.72		& Soy sauce 	& 5.49\\ 
+ (長ねぎ)	 & & (醤油)	 & \\ \hline
+Onion		&	3.60		& Green onion 		&3.72\\ 
+ (玉ねぎ) & & (長ねぎ) & \\ \hline
+\ldots &\ldots & \ldots & \ldots \\ \hline
+Taro (里芋)			&	0.03		& Milk (牛乳)		&0.04\\ \hline
+Cake flour	&	0.02		& Minced chicken		&0.03\\ 
+ (薄力粉)	 & &  (鶏ひき肉) & \\ \hline
+Pepper (こしょう)		&	0.01		& Soup (だし汁)		&0.01\\ \hline
 
-In new thread, we calculate threshold then using this value to determine when the light period is starts or finishes. The source code of this task is shown in Listing \ref{code:dynamic_threshold} and \ref{code:detect_period}.
+\end{tabular}
 
-\lstinputlisting[label=code:dynamic_threshold,caption=Light sensor case: Dynamic threshold function]{contents/source_code/dynamic_threshold.java}
+\label{tab:IAoutlier}
+\end{table} 
+\end{CJK}
 
-\lstinputlisting[label=code:detect_period,caption=Light sensor case: Detect light period function]{contents/source_code/detect_light_period.java}
 
-After that, with light period information (start time and finish time) we can check light pattern such as START, FINISH ,0 bit or 1 bit; and we also get data from light pattern. This task is shown in Listing \ref{code:decode_period}.
-
-\lstinputlisting[label=code:decode_period,caption=Light sensor case: Decoding light period function]{contents/source_code/decode_light_period.java}
-
-\subsubsection{Decoding Light Pattern: photocell of accessory with Smartphone}
-
-\begin{figure}
+\begin{table}
 \centering
-\includegraphics[width=0.9\textwidth]{graph/eps/hustle_decode_photon.eps}
-\caption{Decoding light pattern with photocell: a window}
-\label{fig:hustle_decode_photon}
-\end{figure}
+\caption{Ingredient Uniqueness of Ingredients in Japan}
+\begin{tabular}{|c|c|}
+\hline
 
-As said in HUSTLE chapter, in this case, we have only a difference on detecting light period step. We must detect peaks and check this peak whether it is true peak or noise peak. Source code for this step is shown in Listing \ref{code:detect_period2}
+\textbf{Ingredient} &	 \textbf{IU} \\ \hline
+Peanut (落花生) 		&	2.80 \\ \hline
+Chive (あさつき) 		&	2.80 \\ \hline
+\ldots 		&\ldots  \\ \hline
+Salt (塩)			&	0.00 \\ \hline
+Sweet cooking wine (みりん)		&	0.00 \\ \hline
+Ginger (しょうが)		& 	0.00 \\ \hline
+Soy sauce (しょうゆ)		&	0.00\\ \hline
+\end{tabular}
 
-\lstinputlisting[label=code:detect_period2,caption=Photocell case: Detect light period function]{contents/source_code/detect_light_period_2.java}
+\label{tab:IU}
+\end{table} 
+\end{CJK}
 
-\section{Interactions}
 
-As mentioned in the previous chapter, HUSTLE provides two interactions for adding new sensor nodes, which is shown in Figure \ref{fig:implementation_interactions}. In touch interaction, users only have to turn on the new sensor node, touch it with the accessory of smartphone like Figure \ref{fig:implementation_interactions}A. In difference with touch interaction, in blink interaction (Figure \ref{fig:implementation_interactions}B) users can add multi-sensor nodes at the same time in one-shot. Users only have to turn on all new sensor nodes and direct flashlight of smartphone to them, which is used to send information.
+\subsection{Featured Index}
 
-\begin{figure}[hbtp]
+\begin{CJK}{UTF8}{min}
+
+The Featured Index ($FI$) is the main metric we use to elvaluate the regions' featured ingredients. Table~\ref{tab:FI}, which is the experimental result of $FI$ calculation for Kanto vs Shikoku region, shows us some interesting information. For example, Natto (納豆) is the ingredient which has the highest $FI$ value in Kanto region. This means Natto (納豆) is possibly the featured ingredient of Kanto region. In Shikoku region, Ponzu sauce (ポン酢) is also often used for Shikoku's foods. The $FI$ of the same ingredient for different regions might differentiate but we figure that if an ingredient ranks high in one region, it cannot rank high in any other regions. The same thing is true for the low-rank ingredients.	  
+
+\begin{table}
 \centering
-\includegraphics[width=0.9\textwidth]{image/eps/implementation_interaction.eps}
-\caption{Interactions in HUSTLE}
-\label{fig:implementation_interactions}
-\end{figure}
+\caption{Featured Index of Ingredients in Kanto region and Shikoku region}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{\large Kanto region}} & \multicolumn{2}{|c|}{\textbf{\large Shikoku region}} \\
+\cline{1-4}
 
-\section{Summary}
-This section summarizes this chapter. Firstly, we described that we implement HUSTLE on Samsung Galaxy Nexus S Smartphone, SunSpot Java Development Kits. We also described implementation of each module such as controlling module, wireless communication module, light communication module and user interface module. At last, we showed the implementation of light communication module, encoding and decoding part with Java code, which is used in Smartphone and Sensor Node.
+\textbf{Ingredient} &	\textbf{ FI} & \textbf{Ingredient} & \textbf{FI}\\ \hline
+Natto (納豆)		&0.60 	& Kelp (昆布)		&	1.40\\ \hline
+Dried radish 	&0.47 	& Sea bream 	&	0.94\\ 
+ (切干大根) & & (鯛の切り身)  & \\ \hline
+Saury 	&0.47 	&  Ponzu suace 	& 	0.90\\
+(さんま) & & (ポン酢) & \\ \hline
+\ldots 		&\ldots 	& \ldots 			& 	\ldots \\ \hline
+Vineger		& 0.00 	& Sweet cooking wine 	&	0.00  \\
+ (酢)	& & (みりん) & \\ \hline
+Shredded seaweed 	&0.00	& Egg 				&	0.00 \\ 
+(刻みのり) & & (卵) & \\ \hline
+Wine (酒)			&0.00	& Wine (酒)					&	0.00 \\ \hline
+Ginger (しょうが) 		&0.00	& Rice (米)					&	0.00 \\ \hline
+\end{tabular}
 
+\label{tab:FI}
+\end{table} 
+
+\end{CJK}
