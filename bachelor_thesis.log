@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.4)  4 JAN 2014 12:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.4)  4 JAN 2014 12:48
 entering extended mode
  %&-line parsing enabled.
 **bachelor_thesis.tex
@@ -427,6 +427,14 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 Non-PDF special ignored!
+Non-PDF special ignored!] (./contents/abstract.tex) [1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!] (./bachelor_thesis.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
@@ -434,7 +442,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
- [1
+ [2
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -470,7 +478,7 @@ Non-PDF special ignored!])
 \tf@toc=\write4
 \openout4 = `bachelor_thesis.toc'.
 
- [2
+ [3
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -490,7 +498,7 @@ Non-PDF special ignored!] (./bachelor_thesis.lot)
 \tf@lot=\write5
 \openout5 = `bachelor_thesis.lot'.
 
- [3
+ [4
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -510,11 +518,15 @@ Non-PDF special ignored!] (./bachelor_thesis.lof)
 \tf@lof=\write6
 \openout6 = `bachelor_thesis.lof'.
 
- [4
+ [5
 Non-PDF special ignored!
 Non-PDF special ignored!
 
 
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -757,7 +769,8 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!]) (./bachelor_thesis.bbl [22
+Non-PDF special ignored!]) (./contents/appendix.tex) (./bachelor_thesis.bbl
+[22
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -791,37 +804,42 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!] (./bachelor_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7883 strings out of 495046
- 111176 string characters out of 1181938
+ 7893 strings out of 495046
+ 111324 string characters out of 1181938
  220041 words of memory out of 3000000
- 10740 multiletter control sequences out of 15000+50000
+ 10742 multiletter control sequences out of 15000+50000
  31002 words of font info for 117 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,9n,40p,1258b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.p
-fb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjhira.pfb></usr/share/texmf/font
-s/type1/wadalab/JIS/dmjka.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkata
-.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkb.pfb></usr/share/texmf/font
-s/type1/wadalab/JIS/dmjkc.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkd.p
-fb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjke.pfb></usr/share/texmf/fonts/
-type1/wadalab/JIS/dmjkf.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkg.pfb
-></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkh.pfb></usr/share/texmf/fonts/ty
-pe1/wadalab/JIS/dmjki.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkj.pfb><
-/usr/share/texmf/fonts/type1/wadalab/JIS/dmjkk.pfb></usr/share/texmf/fonts/type
-1/wadalab/JIS/dmjkl.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkp.pfb></u
-sr/share/texmf/fonts/type1/wadalab/JIS/dmjsy.pfb>
-Output written on bachelor_thesis.pdf (29 pages, 276400 bytes).
+pdfTeX warning (dest): name{
+figure.5.2} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.5.1} has been referenced but does not exist,
+ replaced by a fixed one
+
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjhir
+a.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjka.pfb></usr/share/texmf/fon
+ts/type1/wadalab/JIS/dmjkata.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjk
+b.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkc.pfb></usr/share/texmf/fon
+ts/type1/wadalab/JIS/dmjkd.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjke.
+pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkf.pfb></usr/share/texmf/fonts
+/type1/wadalab/JIS/dmjkg.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkh.pf
+b></usr/share/texmf/fonts/type1/wadalab/JIS/dmjki.pfb></usr/share/texmf/fonts/t
+ype1/wadalab/JIS/dmjkj.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkk.pfb>
+</usr/share/texmf/fonts/type1/wadalab/JIS/dmjkl.pfb></usr/share/texmf/fonts/typ
+e1/wadalab/JIS/dmjkp.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjsy.pfb>
+Output written on bachelor_thesis.pdf (30 pages, 278908 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 75 named destinations out of 1000 (max. 500000)
+ 429 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
  193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
