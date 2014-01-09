@@ -1,11 +1,17 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.4)  4 JAN 2014 12:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.6)  9 JAN 2014 11:57
 entering extended mode
  %&-line parsing enabled.
 **bachelor_thesis.tex
 (./bachelor_thesis.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, pinyin, loaded.
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size12.clo
@@ -231,8 +237,6 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count103
 \U@D=\dimen113
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -526,10 +530,6 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
 Non-PDF special ignored!] (./contents/intro.tex
 Chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -549,7 +549,7 @@ Non-PDF special ignored!
 
 
 Non-PDF special ignored!
-Non-PDF special ignored!]) (./contents/algorithm.tex [3
+Non-PDF special ignored!]) (./contents/background.tex [3
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -561,7 +561,85 @@ Non-PDF special ignored!
 
 
 Non-PDF special ignored!
-Non-PDF special ignored!] [5
+Non-PDF special ignored!]) (./contents/related.tex [5
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!]
+Chapter 3.
+[6
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!]
+
+LaTeX Warning: Citation `Selavo:2007:LWS:1322263.1322274' on page 7 undefined o
+n input line 14.
+
+
+LaTeX Warning: Citation `Mayrhofer:2007:SWB:1758156.1758168' on page 7 undefine
+d on input line 19.
+
+
+LaTeX Warning: Citation `vibconnect' on page 7 undefined on input line 19.
+
+
+LaTeX Warning: Citation `Selavo:2007:LWS:1322263.1322274' on page 7 undefined o
+n input line 19.
+
+
+LaTeX Warning: Citation `Duquennoy:2011:DSR:2070942.2071012' on page 7 undefine
+d on input line 19.
+
+
+LaTeX Warning: Citation `someassemblyrequired' on page 7 undefined on input lin
+e 19.
+
+
+LaTeX Warning: Citation `bodysensor' on page 7 undefined on input line 19.
+
+
+LaTeX Warning: Citation `Beigl:2006:UEU:1127777.1127832' on page 7 undefined on
+ input line 19.
+
+
+LaTeX Warning: Citation `Duquennoy:2011:DSR:2070942.2071012' on page 7 undefine
+d on input line 19.
+
+
+LaTeX Warning: Citation `someassemblyrequired' on page 7 undefined on input lin
+e 19.
+
+
+LaTeX Warning: Citation `Beigl:2006:UEU:1127777.1127832' on page 7 undefined on
+ input line 19.
+
+
+LaTeX Warning: Citation `bodysensor' on page 7 undefined on input line 19.
+
+
+LaTeX Warning: Citation `Selavo:2007:LWS:1322263.1322274' on page 7 undefined o
+n input line 19.
+
+) (./contents/algorithm.tex [7
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!]
+Chapter 4.
+[8
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!] [9
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -569,7 +647,7 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] [6
+Non-PDF special ignored!] [10
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -577,14 +655,14 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!]) (./contents/implementation.tex [7
+Non-PDF special ignored!]) (./contents/implementation.tex [11
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]
-Chapter 3.
+Chapter 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
@@ -605,7 +683,7 @@ File: c70min.fd 2008/12/29 4.8.2
 )
 (/usr/share/texmf/tex/latex/CJK/UTF8/c70min.fdx
 File: c70min.fdx 2008/12/29 4.8.2
-) [8
+) [12
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -616,7 +694,7 @@ File: UTF8.enc 2008/12/29 4.8.2
 )
 (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2008/12/29 4.8.2
-) [9
+) [13
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -629,56 +707,8 @@ File: UTF8.enc 2008/12/29 4.8.2
 )
 (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2008/12/29 4.8.2
-) [10
+) [14
 Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] [11
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!]) (./contents/application.tex [12
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!]
-Chapter 4.
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
-[13
-Non-PDF special ignored!
-Non-PDF special ignored!
-
-
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!]
-File: system.eps Graphic file (type eps)
- <system.eps>
-Overfull \hbox (38.02747pt too wide) in paragraph at lines 23--24
- [][] 
- []
-
-[14
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -697,86 +727,134 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
+Non-PDF special ignored!]) (./contents/application.tex [16
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] [16
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!]) (./contents/conclusion.tex [17
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] [18
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]
-Chapter 5.
-) (./contents/ack.tex [19
+Chapter 6.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+[17
 Non-PDF special ignored!
 Non-PDF special ignored!
 
 
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]
+File: system.eps Graphic file (type eps)
+ <system.eps>
+Overfull \hbox (38.02747pt too wide) in paragraph at lines 23--24
+ [][] 
+ []
+
+[18
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [19
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!] [20
 Non-PDF special ignored!
 Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]) (./contents/conclusion.tex [21
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [22
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]
+Chapter 7.
+) (./contents/ack.tex [23
+Non-PDF special ignored!
+Non-PDF special ignored!
 
 
 Non-PDF special ignored!
-Non-PDF special ignored!]) (./contents/pub.tex [21
+Non-PDF special ignored!] [24
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!]) (./contents/pub.tex [25
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]) (./contents/appendix.tex) (./bachelor_thesis.bbl
-[22
+[26
 Non-PDF special ignored!
 Non-PDF special ignored!
 
 
 Non-PDF special ignored!
-Non-PDF special ignored!]) [23
+Non-PDF special ignored!]) [27
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -798,24 +876,73 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] [24
+Non-PDF special ignored!] [28
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] (./bachelor_thesis.aux) ) 
+Non-PDF special ignored!] (./bachelor_thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7893 strings out of 495046
- 111324 string characters out of 1181938
- 220041 words of memory out of 3000000
- 10742 multiletter control sequences out of 15000+50000
+ 7940 strings out of 493848
+ 112031 string characters out of 1152824
+ 221548 words of memory out of 3000000
+ 10849 multiletter control sequences out of 15000+50000
  31002 words of font info for 117 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
+ 714 hyphenation exceptions out of 8191
  38i,9n,40p,1258b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{
-figure.5.2} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{figure.4.1} has been referenced but does not exis
+t, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.5.1} has been referenced but does not exist,
- replaced by a fixed one
+pdfTeX warning (dest): name{table.3.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.3.4} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.3.3} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.3.2} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.3.1} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.0.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.0.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.0.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.0.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.0.1} has been referenced but does not 
+exist, replaced by a fixed one
 
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texl
@@ -837,9 +964,9 @@ b></usr/share/texmf/fonts/type1/wadalab/JIS/dmjki.pfb></usr/share/texmf/fonts/t
 ype1/wadalab/JIS/dmjkj.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjkk.pfb>
 </usr/share/texmf/fonts/type1/wadalab/JIS/dmjkl.pfb></usr/share/texmf/fonts/typ
 e1/wadalab/JIS/dmjkp.pfb></usr/share/texmf/fonts/type1/wadalab/JIS/dmjsy.pfb>
-Output written on bachelor_thesis.pdf (30 pages, 278908 bytes).
+Output written on bachelor_thesis.pdf (34 pages, 286439 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
+ 476 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
  193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

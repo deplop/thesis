@@ -1,57 +1,11 @@
 \chapter{Related Work}\label{chap:related}
-In the previous chapter, we described some communication techniques, but these are some problems when apply at sensor node, small devices. With this reason we have some researches about near communication techniques depend on properties and hardware of sensor nodes, which are described in the first section of this chapter. In the next section, we also describe some deploying methods for both secured WSN and unsecured WSN.%In this chapter, we describe some related work concerning near communication with common hardware.
+
 \clearpage
 
 \section{Near communication}\label{sec:related_near}
 
-\begin{figure}[tb]
-\centering
-\includegraphics[width=0.7\textwidth]{image/eps/releated_shake_before.eps}
-\caption{Shake Well Before Use: devices with accelerometers}
-\label{fig:releated_shake}
-\end{figure}
-
-In this section, we discuss communication between devices which can be applied with only common hardwares of sensor nodes. We have two methods that use object movement for exchanging data. Shake Well Before Use \cite{Mayrhofer:2007:SWB:1758156.1758168} is an example for authenticating device pairings with shaking patterns. In fact, with this method, we can not send data between two devices, but this can help us make a shared key between two devices by only shaking it at the same time like Figure \ref{fig:releated_shake}. Then we have same accelerometer data from two devices and can make a shared key from it. We can use the key for encrypting and decrypting data, which is sent over some communication techniques such as wireless communication. However, the problem of this method is speed and feedback. It only can make 7 bits shared key per second. This will take a lot of time to make a longer shared key such as 64bit security key. Another problem is about feedback step, with shaking action, users find it difficult to know the status of devices and it make difficult to know when making step finishes and when shared key is created successfully or not.
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=0.5\textwidth]{image/eps/releated_vib_conect2.pdf}
-\caption{Vib-Connect: Vibration Patterns}
-\label{fig:releated_vib}
-\end{figure}
-
-Vib-Connect \cite{vibconnect} is also one type of near communication with only common hardwares, accelerometer for receiving data. On the other hand, according to the previous method, we can send data with this method. We use the smartphone's vibrate motor to send the vibrate pattern to other smartphones or laptops. With an accelerometer at receiver, we can sense the change of vibration and decode vibrate pattern like Figure \ref{fig:releated_vib}. However, there is a problem with this method, which needs a quiet environment and have a low speed at about 10 bits data per second.
-
-%\subsection{Shake Well Before Use: Authentication Based on Accelerometer Data}
-%
-%\begin{figure}[tb]
-%\centering
-%\includegraphics[width=0.7\textwidth]{image/eps/releated_shake_before.eps}
-%\caption{Shake Well Before Use: devices with accelerometers}
-%\label{fig:releated_shake}
-%\end{figure}
-%
-%
-%Firstly, we have a method for authenticating device pairings with shaking patterns in \cite{Mayrhofer:2007:SWB:1758156.1758168}. In fact, with this method we cannot send data between two devices, but this can help us make a shared key between two devices by only shaking it at the same time. Then we have same accelerometer data from two devices and can make a shared key from it. We can use the key for encrypt and decrypt data, which is sent over some communication technique such as wireless communication. %(pic two accelerometer data).
-%
-%However, the problem of this method is speed and feedback. It only can make 7 bits sharing key per second. This will take a lot of time to make a longer sharing key such as 64bit security keys. Another problem is about feedback step, with shaking action, users find it difficult to know status of devices and it make difficult to know whenever making step finishes and whether sharing key is created successfully or not.
-%
-%\subsection{Vib-Connect: A Device Collaboration Interface Using Vibration}
-%
-%\begin{figure}[tb]
-%\centering
-%\includegraphics[width=0.5\textwidth]{image/eps/releated_vib_conect2.pdf}
-%\caption{Vib-Connect: Vibration Patterns}
-%\label{fig:releated_vib}
-%\end{figure}
-%
-%In research \cite{vibconnect}, we also have a method that using accelerometer, but different with previous research, we can send data with this method. We use the Smartphone vibrate motor to send the vibrate pattern to others Smartphone or laptop. With an accelerometer at receiver, we can sense the change of vibrate and decode vibrate pattern.
-%
-%However, there is a problem with this method, which need a quiet environment and have low speed with about 10 bit data per second.
 
 \section{WSN deploying methods}\label{sec:related_setting}
-
-In this section we discuss some WSN deploying methods. Basing on technique that is applied, WSN deploying methods can be classified into three groups: 1)Pre-Install new sensor nodes, 2)Exchanging static information, 3)Exchanging dynamic information.
 
 \subsection{Pre-Install new sensor nodes}
 
@@ -60,82 +14,6 @@ In this method, WSN identification and other information are deployed to new sen
 Luster \cite{Selavo:2007:LWS:1322263.1322274} is an example of this method. Inspire of the problem of this method is about configuring process, this method requires to have certain skills, need to do with a computer with limited mobility. Besides, it is also difficult to reconfigure it again for use in a different WSN. Thus, this method cannot meet our research's requirements.
 
 \subsection{Exchanging static information}
-
-This method is used to make an unsecured WSN. Identification of each sensor node is put on it such as QR-code, barcode. The identification is used to determine what sensor nodes will be added. 
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=0.7\textwidth]{image/eps/releated_snap.eps}
-\caption{Snap: Node identification}
-\label{fig:releated_snap}
-\end{figure}
-
-Snap \cite{Duquennoy:2011:DSR:2070942.2071012} is a research in range of this type. Camera of smartphone is used to read QR-Code of each sensor node, so we can identify exactly sensor node which should be added (Figure \ref{fig:releated_snap}). However, there is not any safe data from QR-Code to use as security key, so data could not be sent safely in adding process. As the result, this method cannot meet security requirement. 
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=0.6\textwidth]{image/eps/releated_some_assembly.eps}
-\caption{Sensor association in the Home Energy Tutor.}
-\label{fig:releated_some_assembly}
-\end{figure}
-
-Another research can be found in Some Assembly Required  \cite{someassemblyrequired}. By using a sensor network kit called Home Energy Tutor and installing the application, users only have to place various sensor nodes and scan barcodes on the sensor and in a printed catalog (Figure \ref{fig:releated_some_assembly}). This creates an association between sensor node and a room or appliance. However, the problem is that with only barcodes there is no safe data to use as a security key, especially when the device is placed outdoors. Therefore, setting up data could not be sent safely. At one-time only one sensor node is added, consequently this method can not meet setting up time requirement. 
-
-\subsection{Exchanging dynamic information}
-
-In this method, data is exchanged between sensor node and other devices such as identification, security key. Therefore, this can be used to make a secured WSN. In oder to exchange data securely, near communication is used such as RFID, NFC, infrared communication or light communication.
-
-The first research in this method is Reliable set-up of medical body-sensor networks \cite{bodysensor}. IrDA (Infrared Data Association) is used to transfer unique code to identify the exact sensor node for adding to WSN. However it may cause some problems about price of sensor nodes, these problems make WSN more expensive. With IrDA, sensor node requires having correlative hardware which is used only one-time in the installation step. This makes the sensor node more expensive and wasteful, especially with the existence of cheap sensor nodes. This method also needs a special device, which is used as a connector of WSN.
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=0.5\textwidth]{image/eps/releated_upart.eps}
-\caption{uPart configuration using a PC monitor}
-\label{fig:releated_upart}
-\end{figure}
-
-The uPart experience \cite{Beigl:2006:UEU:1127777.1127832} is also one research in range of this method. The light sensor is used as a receiving data channel to configure the uPart sensor node (Figure \ref{fig:releated_upart}). In fact, it is only sensor reading cycle, compression values and what values should be transferred, and same with previous related research there is no safe data to use as security key, then we cannot keep the security of WSN.
-
-%\subsection{Some assembly required: Supporting end-user sensor installation in domestic ubiquitous computing environments}
-%
-%\begin{figure}[tb]
-%\centering
-%\includegraphics[width=0.6\textwidth]{image/eps/releated_some_assembly.eps}
-%\caption{Sensor association in the Home Energy Tutor.}
-%\label{fig:releated_some_assembly}
-%\end{figure}
-%
-%The first research is described in \cite{someassemblyrequired}. By using a sensor network kit called Home Energy Tutor and to install the application, users only have to place various sensor nodes and scan barcodes on the sensor and in a printed catalog. This creates an association between sensor node and a room or appliance. However the problem is that with only barcodes there are no safe data to use as security key. Especially when the device is placed outdoors. Therefore setting up data could not be sent with safe. And also one-time only one sensor nodes are added, therefore this method can not meet setting up time requirement. 
-%
-%\subsection{The uPart experience: Building a wireless sensor network}
-%
-%\begin{figure}[tb]
-%\centering
-%\includegraphics[width=0.5\textwidth]{image/eps/releated_upart.eps}
-%\caption{uPart configuration using a PC monitor}
-%\label{fig:releated_upart}
-%\end{figure}
-%
-%In research \cite{Beigl:2006:UEU:1127777.1127832}, we have a method that using the light sensor as a receiving data channel to configure the uPart sensor node. But it is only sensor reading cycle, compression values and what values should be transferred, and same with previous related research there is no safe data to use as security key, then we cannot keep the security of WSN.
-%
-%\subsection{Luster: wireless sensor network for environmental research.}
-%
-%Another we have \cite{Selavo:2007:LWS:1322263.1322274}. Before using, sensor nodes are configured with WSN information and secure protocol data. This information can help determine which WSN that sensor node should be added to. When a sensor node is turned on, it broadcasts the data to neighboring nodes. With this data, it is added to the corresponding WSN. But the problem of this method is about configuring process. This also required to have certain skill, need to do with a computer with limited mobility. Besides, it is also difficult to reconfigure it again for use in a different WSN. Thus, this method can not meet our research's requirements.
-%
-%\subsection{Reliable set-up of medical body-sensor networks}
-%
-%Difference with previous related research, \cite{bodysensor} is one of research that uses IrDA (Infrared Data Association) to transfer unique code to identify the exact sensor node for adding to WSN. But it may cause some problem about cost of sensor nodes. With IrDA, sensor node requires having correlative hardware which is used only one-time in the installation step. This makes the sensor node more expensive and wasteful, especially with the existence of cheap sensor nodes. This method also need a special devices, which is used as connector of WSN.
-%
-%\subsection{Snap: rapid sensornet deployment with a sensornet appstore}
-%
-%\begin{figure}[tb]
-%\centering
-%\includegraphics[width=0.7\textwidth]{image/eps/releated_snap.eps}
-%\caption{Snap: Node identification}
-%\label{fig:releated_snap}
-%\end{figure}
-%
-%Another method is described at \cite{Duquennoy:2011:DSR:2070942.2071012}. In this method, camera of Smartphone is used to read QR-Code of each sensor node, with this we can identify exactly what sensor node should be added. But however, haven't any safe data from QR-Code to use as security key, therefore data could not be sent with safe in adding process, thus this method can not meet security requirements.
 
 \section{Summary}
 To meet the requirements of deploying a WSN with low cost, we have some researches about near communication with common hardwares such as \cite{Mayrhofer:2007:SWB:1758156.1758168} and  \cite{vibconnect} with accelerometer. There are some methods for deploying a WSN become simpler and faster: Pre-Install new sensor nodes (Luster \cite{Selavo:2007:LWS:1322263.1322274}), Exchanging static information (Snap \cite{Duquennoy:2011:DSR:2070942.2071012}, Some assembly required  \cite{someassemblyrequired}), Exchanging dynamic information (Reliable set-up of medical body-sensor networks \cite{bodysensor}, \cite{Beigl:2006:UEU:1127777.1127832}). However some researches cannot make a secured WSN \cite{Duquennoy:2011:DSR:2070942.2071012}\cite{someassemblyrequired}\cite{Beigl:2006:UEU:1127777.1127832},  \cite{bodysensor} need some special hardwares and others \cite{Selavo:2007:LWS:1322263.1322274} do not provide regular users with a friendly interaction. Finally they do not meet all of the requirements in our research.% easier, faster and with lower cost.
