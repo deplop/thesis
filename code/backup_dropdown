@@ -1,0 +1,33 @@
+<div class="row">
+	<?php echo $form->labelEx($model,'region_id'); ?>
+	<?php  echo $form->dropDownList($model,'region_id',$regionList,	array(
+		'id'=>'region_id',
+		'ajax' => array(
+			'type'=>'POST', //request type
+			'url'=>CController::createUrl('site/dynamicPrefecture'), //url to call.
+	//Style: CController::createUrl('currentController/methodToCall')
+			'update'=>'#prefecture_id', //selector to update
+	//'data'=>'js:javascript statement'
+	//leave out the data key to pass all form values through
+	),
+		'empty'=>'Select a region'
+		));
+
+
+
+		?>
+		<?php echo $form->error($model,'region_id'); ?>
+	</div>
+
+	<div class="row">
+	
+	<?php echo $form->labelEx($model,'prefecture_id'); ?>
+	<?php echo $form->dropDownList($model,'prefecture_id',array(),array(
+	'empty'=>'Select a prefecture',
+	'id'=>'prefecture_id'
+	));
+
+	
+	?>
+	<?php echo $form->error($model,'prefecture_id'); ?>
+	</div>

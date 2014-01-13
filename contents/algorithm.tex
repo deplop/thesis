@@ -63,3 +63,86 @@ $FI(i,R)= IF(i,R) \times IA(i,R) \times IU(i,A)$
 \end{center}
 
 The $FI$ function returns the featured index of ingredient $i$ in a region which has a set of recipes $R$. $A$ is the set of all regions in the country. The ingredients which have the highest $FI$ would be the featured ingredients. On the other hands, the ingredients which have the lowest $FI$ would be considered as the common ingredients for every region.
+
+\section{Meta data Recalculation on Update}
+
+To evaluate the Feature Ingredient we need to calculate the meta data of recipe database, which are $IF$, $IU$, $IA$ values.
+
+In chapter 6 We propose a system that integrate a function allowing user to register their own recipes to the system. And every time a new recipe is added to the database, we have to recalculate the meta data. There is a fact that registering new recipe is a frequent action of users and each single action we still have to calculate many kind of functions. This might cause massive calculation for the system. But we aware of useful information in the old meta data can be used to calculate the new meta data. This means we don't need to gather all the data in database and recalculate new meta data. Instead, we just need to use the old meta data. In this subsection we will discuss about how to accomplish this task. 
+
+
+\subsection{IF recalculation on update}
+
+The $IF$ value of ingredient $i$ in region $R$ is calculated by this formula.
+\begin{center}
+\smallskip
+$ IF(i,R)= \frac{\displaystyle | \{i | i \in r, r \in R \} | }{\displaystyle | R | }$
+\smallskip
+\label{eq:Ori}
+\end{center}
+
+When we add one more recipe, we also add some more ingredients. These ingredients make the frequencies of them in the region change. We aware that there are two kind of ingredients will make different change in the $IF$ value of ingredients in the regions: the ingredients in the new recipe and the ingredients that are not. In any case the denominator is added 1 because the number of recipe in the region has increased 1. But in the former case, the numerator doesn't change while in the later case it does. Thus, we have two following formulas for the former and later case respectively. 
+
+\begin{center}
+\smallskip
+$ IF'(i,R)=  IF(i,R) - \frac{\displaystyle  IF(i,R)-1 }{\displaystyle | R | +1}$
+\smallskip
+\end{center}
+
+and 
+
+\begin{center}
+\smallskip
+$ IF'(i,R)=  IF(i,R) - \frac{\displaystyle  IF(i,R)}{\displaystyle | R | +1}$
+\smallskip
+\end{center}
+
+Remember that the $IF$ value is calculated for only the ingredients in the region not in other regions. The number of recalculated $IF$ is the number ingredients in the region which has the new recipe.
+ 
+\subsection{IU recalculation on update}
+
+The $IU$ value of ingredient $i$ only changes when $i$ is added for the first time in a region. In the case, the denominator in this formula is added 1. Thus we can have the following formula for the new $IU$ value of ingredient $i$.
+
+\begin{center}
+\smallskip
+$IU'(i,A)= -IU(i,A)\times\log{(\displaystyle 1+  \frac{1}{\displaystyle |\{i|i \in a, a \in A \}|})}$
+\smallskip
+\end{center}
+
+\subsection{IA recalculation on update}
+The $IA$ formula is complex. When we have one new recipe, the average amount of ingredient in region and all over the country has been changed. This causes both the numerator and denominator in the main formula change. Thus, we have new formula as below: 
+
+\begin{center}
+\smallskip
+$IA'(i,R)= \frac{\displaystyle M'(i,R)}{\displaystyle M'(i,AR)}$
+\smallskip
+\end{center}
+
+Our task is recalculating both the average amount of ingredient $i$ in region $R$ and all over the country $A$. Because we use the same formula for both of these cases, we can use the same new formula.
+When a new recipe is added, the numerator in the below formula will be added by the new amount of the ingredient $i$ in the new recipe and the denominator is added by 1.
+ 
+\begin{center}
+\smallskip
+$M(i,S)= \frac{\displaystyle \sum_{}^{i \in r, r \in S} amount(i,r)}{\displaystyle |\{i|i \in r, r \in S\}|}$
+\smallskip
+\end{center}
+
+Thus, from the original formula above, we have a formula for recalculation as follows:
+
+\begin{center}
+\smallskip
+$M'(i,S)= M(i,S)- \frac{\displaystyle M(i,S)-amount(i,r)}{\displaystyle |\{i|i \in r, r \in S\}|+1}$
+\smallskip
+\end{center}
+
+Because only the average amount of ingredients in the new recipe has been changed, thus we only recalculate for these ingredients. 
+
+\subsection{FI recalculation on update}
+
+The $FI$ value of ingredient $i$ in region $R$ is the production of the above values, thus we just need to keep the old formula.
+ 
+\begin{center}
+\smallskip
+$FI(i,R)= IF(i,R) \times IA(i,R) \times IU(i,A)$ 
+\smallskip
+\end{center}

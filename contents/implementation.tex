@@ -1,7 +1,8 @@
-\chapter{Implementation of HUSTLE}\label{chap:implementation}
+\chapter{Implementation}\label{chap:implementation}
 This section describes the recipe databse and experimental studies on this database by applying the featured ingredient analysis algorithm.  
 
 \subsection{The Recipe Database}
+In order to make advantages of recipes in food analysis, we collected recipes in many regions to build a recipe database. 
 
 We build a recipe database in which recipes are grouped by region. A script written in Python crawls all the recipes from a Japanese cooking website~\cite{web:recipe}. We chose this website because the recipes are typical foods grouped by regions. The website is only for Japanese recipes, thus we now only have the database for Japanese foods. Each food is characterized by its name, the region it belongs to and its recipe. Each recipe is stored as a map collection in which the ingredient is the key and the couple of amount and unit is the value. Each of the recipes we get from the website is created for various amounts of people. For example, there are recipes for 4 people but there are also recipes for 3 people. Thus we need to normalize the ingredients' amount in each recipe for one person.
 

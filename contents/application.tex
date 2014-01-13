@@ -1,4 +1,5 @@
 \chapter{Application}\label{chap:evaluation}
+
 Using the algorithm we propose a system that will help cooking people transform the typical region's food from the orginal recipe to a new one that has a typical taste of specified region. For convenience and wider use, we develop this system as a web-based system. The system's outline and the model are described below.  
 
 \section{The System's Outline} 
@@ -102,3 +103,29 @@ Consider the list of materials as a vector. We calculate the similarity between 
 \end{algorithmic}
 
 Note that though $X$ and $Y$ don't have to have the same dimensions but we only select the ingredients $i$ which appears both in $X$ and $Y$ to calculate the similarity. $x_i$ and $y_i$ in which $i \in [k,l]$, are the amounts of ingredient $i$ in $X$ and $Y$ respectively.
+
+\section{Database Design}
+
+
+\subsection{Entity Relation Diagram}
+
+Basically, we have the following entities:
+\begin{itemize}
+\item Ingredient
+\item User
+\item Recipe
+\item Region
+\item Prefecture
+\end{itemize}
+
+and the following relations between these entities:
+
+\begin{itemize}
+\item The relation named ``has'' between entity 
+
+\item The relation named ``include'' between entity 
+
+\end{itemize}
+
+\subsection{Database Scheme}
+
