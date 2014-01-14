@@ -3,45 +3,45 @@ The top-level auxiliary file: bachelor_thesis.aux
 The style file: ieeetr.bst
 Database file #1: sigproc.bib
 Warning--empty booktitle in villalobos:image-calorie
-You've used 8 entries,
+You've used 13 entries,
             1876 wiz_defined-function locations,
-            520 strings with 4905 characters,
-and the built_in function-call counts, 1735 in all, are:
-= -- 140
-> -- 82
+            556 strings with 6099 characters,
+and the built_in function-call counts, 3339 in all, are:
+= -- 304
+> -- 133
 < -- 0
-+ -- 31
-- -- 23
-* -- 116
-:= -- 253
-add.period$ -- 8
-call.type$ -- 8
-change.case$ -- 8
++ -- 50
+- -- 37
+* -- 233
+:= -- 467
+add.period$ -- 13
+call.type$ -- 13
+change.case$ -- 13
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 92
-empty$ -- 199
-format.name$ -- 23
-if$ -- 419
+cite$ -- 14
+duplicate$ -- 180
+empty$ -- 356
+format.name$ -- 37
+if$ -- 817
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 5
-newline$ -- 27
-num.names$ -- 8
-pop$ -- 47
+int.to.str$ -- 13
+missing$ -- 10
+newline$ -- 42
+num.names$ -- 13
+pop$ -- 63
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 55
+skip$ -- 118
 stack$ -- 0
-substring$ -- 60
-swap$ -- 20
+substring$ -- 184
+swap$ -- 57
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 13
-width$ -- 9
-write$ -- 70
+while$ -- 32
+width$ -- 15
+write$ -- 123
 (There was 1 warning)

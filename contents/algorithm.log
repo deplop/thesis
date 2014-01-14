@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.6)  10 JAN 2014 14:19
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.6)  14 JAN 2014 11:25
 entering extended mode
  %&-line parsing enabled.
 **algorithm.tex
@@ -3165,7 +3165,7 @@ Overfull \hbox (46.82144pt too wide) in paragraph at lines 48--50
  []
 
 
-Overfull \hbox (89.16737pt too wide) in paragraph at lines 48--50
+Overfull \hbox (106.38953pt too wide) in paragraph at lines 48--50
  [] []$ 
  []
 
@@ -4348,6 +4348,16 @@ Overfull \hbox (12.68056pt too wide) in paragraph at lines 69--70
 \OML/cmm/m/it/10 IA$
  []
 
+Missing character: There is no I in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 6 in font nullfont!
 Missing character: There is no W in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -4368,14 +4378,32 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -6002,14 +6030,8 @@ Overfull \hbox (49.627pt too wide) in paragraph at lines 108--110
  []
 
 
-Overfull \hbox (51.82153pt too wide) in paragraph at lines 108--110
- \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 IU\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i; A\
-OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^B 
- []
-
-
-Overfull \hbox (114.16733pt too wide) in paragraph at lines 108--110
- [] []$ 
+Overfull \hbox (123.7448pt too wide) in paragraph at lines 108--110
+ \OML/cmm/m/it/10 log[]$ 
  []
 
 ! Undefined control sequence.

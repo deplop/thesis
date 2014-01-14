@@ -10,9 +10,10 @@
 \BOOKMARK [1][-]{section.2.3}{2.3 Problem related to TF-IDF}{chapter.2}
 \BOOKMARK [1][-]{section.2.4}{2.4 Summary}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{3 Related Work}{}
-\BOOKMARK [1][-]{section.3.1}{3.1 }{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{3.2 }{chapter.3}
-\BOOKMARK [1][-]{section.3.3}{3.3 Summary}{chapter.3}
+\BOOKMARK [1][-]{section.3.1}{3.1 Recommending Recipe by Ingredients}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{3.2 Replacing ingredients}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{3.3 TF-IDF algorithm}{chapter.3}
+\BOOKMARK [1][-]{section.3.4}{3.4 Summary}{chapter.3}
 \BOOKMARK [0][-]{chapter.4}{4 Food's Feature-Ingredient Extraction Algorithm}{}
 \BOOKMARK [1][-]{section.4.1}{4.1 Ingredient Frequency}{chapter.4}
 \BOOKMARK [1][-]{section.4.2}{4.2 Ingredient Amount}{chapter.4}
@@ -35,6 +36,9 @@
 \BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 The Recipe Suggestion Module Based On Available Materials}{section.6.2}
 \BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 The Featured Index Calculation Module}{section.6.2}
 \BOOKMARK [2][-]{subsection.6.2.3}{6.2.3 The Nearest Recipe Selection Module}{section.6.2}
+\BOOKMARK [1][-]{section.6.3}{6.3 Database Design}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Entity Relation Diagram}{section.6.3}
+\BOOKMARK [2][-]{subsection.6.3.2}{6.3.2 Database Scheme}{section.6.3}
 \BOOKMARK [0][-]{chapter.7}{7 Conclusions and Future Works}{}
 \BOOKMARK [1][-]{section.7.1}{7.1 Conclusions}{chapter.7}
 \BOOKMARK [1][-]{section.7.2}{7.2 Future Works}{chapter.7}

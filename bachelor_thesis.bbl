@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{morioka:camera-projecter}
 S.~Morioka and H.~Ueda, ``Cooking support system utilizing built-in cameras and
@@ -20,6 +20,27 @@ I.~Ide, Y.~Shidochi, Y.~Nakamura, D.~Deguchi, T.~Takahashi, and H.~Murase,
   understanding to inexperienced users,'' in {\em IEEE International Symposium
   on Multimedia}, TeX Users Group, 2010.
 
+\bibitem{Jones72astatistical}
+K.~S. Jones, ``A statistical interpretation of term specificity and its
+  application in retrieval,'' {\em Journal of Documentation}, vol.~28,
+  pp.~11--21, 1972.
+
+\bibitem{Svensson:2005:DEK:1096737.1096739}
+M.~Svensson, K.~H\"{o}\"{o}k, and R.~C\"{o}ster, ``Designing and evaluating
+  kalas: A social navigation system for food recipes,'' {\em ACM Trans.
+  Comput.-Hum. Interact.}, vol.~12, pp.~374--400, Sept. 2005.
+
+\bibitem{5693849}
+H.~Xie, L.~Yu, and Q.~Li, ``A hybrid semantic item model for recipe search by
+  example,'' in {\em Multimedia (ISM), 2010 IEEE International Symposium on},
+  pp.~254--259, 2010.
+
+\bibitem{Kuo:2012:IMP:2390776.2390778}
+F.-F. Kuo, C.-T. Li, M.-K. Shan, and S.-Y. Lee, ``Intelligent menu planning:
+  Recommending set of recipes by ingredients,'' in {\em Proceedings of the ACM
+  Multimedia 2012 Workshop on Multimedia for Cooking and Eating Activities},
+  CEA '12, (New York, NY, USA), pp.~1--6, ACM, 2012.
+
 \bibitem{web:recipe}
 Wiki, ``Typical foods by area.'' \url{http://www.s-recipe.com/}.
 
@@ -36,5 +57,11 @@ G.~Qian, S.~Sural, Y.~Gu, and S.~Pramanik, ``Similarity between euclidean and
   cosine angle distance for nearest neighbor queries,'' in {\em Proceedings of
   the 2004 ACM symposium on Applied computing}, SAC '04, (New York, NY, USA),
   pp.~1232--1237, ACM, 2004.
+
+\bibitem{Nguyen:2013:RFF:2506023.2506027}
+T.~D. Nguyen, D.~T.-N. Nguyen, and Y.~Kiyoki, ``A regional food's features
+  extraction algorithm and its application,'' in {\em Proceedings of the 5th
+  International Workshop on Multimedia for Cooking \&\#38; Eating Activities},
+  CEA '13, (New York, NY, USA), pp.~15--20, ACM, 2013.
 
 \end{thebibliography}

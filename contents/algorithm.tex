@@ -45,7 +45,7 @@ Because the $IA$ function calculates the mean of ingredient's amount, it is inde
 The $IF$ and $IA$ functions above might tell us how often an ingredient appears in the region, but this ingredient can often appear in many regions. To be a featured ingredient of a region, the ingredient must satisfy the condition that it appears in the region but doesn't appear in many other regions. We propose the third function $IU$ as follows: 
 \begin{center}
 \smallskip
-$IU(i,A)=  \log{\displaystyle \frac{\displaystyle |A|}{\displaystyle |\{i|i \in a, a \in A \}|}}$
+$IU(i,A)=  \log{(\displaystyle 1+ \frac{\displaystyle |A|}{\displaystyle |\{i|i \in a, a \in A \}|})}$
 \smallskip
 \end{center}
 
@@ -105,7 +105,7 @@ The $IU$ value of ingredient $i$ only changes when $i$ is added for the first ti
 
 \begin{center}
 \smallskip
-$IU'(i,A)= -IU(i,A)\times\log{(\displaystyle 1+  \frac{1}{\displaystyle |\{i|i \in a, a \in A \}|})}$
+$IU'(i,A)= log{(\displaystyle 1+  \frac{\displaystyle |A|\times(e^{IU(i,A)}-1)}{\displaystyle |A|+e^{IU(i,A)}-1})}$
 \smallskip
 \end{center}
 
