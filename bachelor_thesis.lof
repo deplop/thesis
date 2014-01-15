@@ -7,5 +7,6 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces The System's Model with Recipe Suggestion Module, Featured Index Calculation Module and Nearest Recipe Selection Module.}}{24}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Entity Relation Diagram}}{29}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Scheme for the System's Database}}{30}{figure.6.3}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Scheme for the System's Database}}{31}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Ingredient Table with real data. It includes 404 ingredients.}}{31}{figure.6.4}
 \addvspace {10\p@ }

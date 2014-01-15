@@ -1,22 +1,22 @@
 \chapter{Introduction}\label{chap:intro}
 %section 1
-This chapter describes the background of our research and the overview of the problem.
 
-\clearpage
-\section{Background}\label{sec:intro_background}
+We can observe that in geographical regions that are far apart from each other often have different features and tastes. For example, the Kanto region, which is located in the East of Japan, often has dense taste in its foods, while the foods in Kansai region, which lies in the southern-central region of Japan's main island Honshu, often has a diluted taste. The reason is because each region has its own special materials for foods and people in these regions have different habits in cooking food.
 
 In this thesis, we present a food analysis system to discover the taste of food and understand the featured ingredients in a specific geographical region.
-%Background
-\par Cooking is the art of making foods. Nowadays, together with the development of technology and the availability of equipment in cooking, many supporting systems are introduced. For example, the cooking support system utilizing built-in cameras and projectors~\cite{morioka:camera-projecter}, the cooking support system by using ubiquitous sensors~\cite{nakauchi:recog}, the calorie measurement system by image processing~\cite{villalobos:image-calorie} or the system which helps inexperienced users in understanding non-professional recipe descriptions~\cite{ide:inexper}, etc. However, by using analysis job we can discover the dominant ingredients and tastes in foods and understand how to alter the taste from one to another.
+
+This chapter describes the goals of our research, the overview of the problem and also the structure of this thesis.
+
+\clearpage
 
 
 \section{Challenges and Research Goals}\label{sec:challenge}
 
 %The problem statement
-\par We can observe that in geographical regions that are far apart from each other often have different features and tastes. For example, the Kanto region, which is located in the East of Japan, often has dense taste in its foods, while the foods in Kansai region, which lies in the southern-central region of Japan's main island Honshu, often has a diluted taste. The reason is because each region has its own special materials for foods and people in these regions have different habits in cooking food. To understand each region's featured taste we need to answer the following questions: ``How can we understand the different features of each region's food?'' and ``What effects change the region's food taste?''. Among the many factors that affect a food's taste, the combination of materials is a direct and important factor. Each recipe has a list of its own ingredients together with their amount. This leads us to the idea that we could automatically achieve the features of a region's foods by analyzing the materials. In this research, we use the idea of TF-IDF method, which is originally used for weighting words and documents, to propose an algorithm to extract the featured ingredients of regional foods.  
+\par To understand each region's featured taste we need to answer the following questions: ``How can we understand the different features of each region's food?'' and ``What effects change the region's food taste?''. Among the many factors that affect a food's taste, the combination of materials is a direct and important factor. Each recipe has a list of its own ingredients together with their amount. This leads us to the idea that we could automatically achieve the features of a region's foods by analyzing the materials. In this research, we use the idea of TF-IDF method, which is originally used for weighting words and documents, to propose an algorithm to extract the featured ingredients of regional foods.  
 
 %The need of the system
-\par We also realize that understanding the region's featured taste and the preferred materials has an application in supporting cooking activities. For example, imagine someone living in Kanto region who wants to eat some traditional foods in the Kansai region. They know the original recipe but there are some tastes in Kansai region that are not favored. They would prefer that traditional foods with replaced ingredients that are easy for Kanto people to eat. Conversely, someone living in Kanto region might want to try Kanto foods with Kansai taste. Solving this kind of problem means we can build up a system which can help people satisfy their taste. The recipes, which are made by the system, would be flexible and diverse.
+\par We also realize that understanding the region's featured taste and the preferred materials has an application in supporting cooking activities. For example, imagine someone living in Kanto region who wants to eat some traditional foods in the Kansai region. They know the original recipe but there are some tastes in Kansai region that are not favoured. They would prefer that traditional foods with replaced ingredients that are easy for Kanto people to eat. Conversely, someone living in Kanto region might want to try Kanto foods with Kansai taste. Solving this kind of problem means we can build up a system which can help people satisfy their taste. The recipes, which are made by the system, would be flexible and diverse.
 
 However, cooking is an sophisticated art, there is not a common formula for all recipes. In this research, we just propose a method, an new approach to evaluate food's taste through analyzing recipe's ingredients.
 
@@ -24,6 +24,6 @@ However, cooking is an sophisticated art, there is not a common formula for all 
 \section{Structure of Thesis}\label{sec:intro_structure}
 %Outline
 
-\par The outline of this thesis is as following. The background of the TF-IDF method is discussed in chapter 2 while the related work to this research is discussed in chapter 3. The algorithm and the experimental results are introduced in chapter 4 and 5 respectively. In chapter 6 we describes the web-based application using the proposed algorithm and how to design the food database. Chapter 7 concludes and discusses the remaining problems and future works.
+\par The outline of this thesis is as following. The background of the TF-IDF method is discussed in chapter 2 while the related work to this research is discussed in chapter 3. The proposed algorithm and the experimental results are introduced in chapter 4 and 5 respectively. In chapter 6 we describes the web-based application using the proposed algorithm and how to design the food database. Chapter 7 concludes and discusses the remaining problems and future works.
 
  

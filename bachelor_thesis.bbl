@@ -35,11 +35,36 @@ H.~Xie, L.~Yu, and Q.~Li, ``A hybrid semantic item model for recipe search by
   example,'' in {\em Multimedia (ISM), 2010 IEEE International Symposium on},
   pp.~254--259, 2010.
 
-\bibitem{Kuo:2012:IMP:2390776.2390778}
-F.-F. Kuo, C.-T. Li, M.-K. Shan, and S.-Y. Lee, ``Intelligent menu planning:
-  Recommending set of recipes by ingredients,'' in {\em Proceedings of the ACM
-  Multimedia 2012 Workshop on Multimedia for Cooking and Eating Activities},
-  CEA '12, (New York, NY, USA), pp.~1--6, ACM, 2012.
+\bibitem{5358168}
+Y.~Mino and I.~Kobayashi, ``Recipe recommendation for a diet considering a
+  user's schedule and the balance of nourishment,'' in {\em Intelligent
+  Computing and Intelligent Systems, 2009. ICIS 2009. IEEE International
+  Conference on}, vol.~3, pp.~383--387, 2009.
+
+\bibitem{Karikome:2010:SSD:2108616.2108684}
+S.~Karikome and A.~Fujii, ``A system for supporting dietary habits: Planning
+  menus and visualizing nutritional intake balance,'' in {\em Proceedings of
+  the 4th International Conference on Uniquitous Information Management and
+  Communication}, ICUIMC '10, (New York, NY, USA), pp.~56:1--56:6, ACM, 2010.
+
+\bibitem{Shidochi:2009:FRM:1630995.1630998}
+Y.~Shidochi, T.~Takahashi, I.~Ide, and H.~Murase, ``Finding replaceable
+  materials in cooking recipe texts considering characteristic cooking
+  actions,'' in {\em Proceedings of the ACM Multimedia 2009 Workshop on
+  Multimedia for Cooking and Eating Activities}, CEA '09, (New York, NY, USA),
+  pp.~9--14, ACM, 2009.
+
+\bibitem{vanPinxteren:2011:DRS:1943403.1943422}
+Y.~van Pinxteren, G.~Geleijnse, and P.~Kamsteeg, ``Deriving a recipe similarity
+  measure for recommending healthful meals,'' in {\em Proceedings of the 16th
+  International Conference on Intelligent User Interfaces}, IUI '11, (New York,
+  NY, USA), pp.~105--114, ACM, 2011.
+
+\bibitem{Wagner:2011:GSH:1961634.1961644}
+J.~Wagner, G.~Geleijnse, and A.~van Halteren, ``Guidance and support for
+  healthy food preparation in an augmented kitchen,'' in {\em Proceedings of
+  the 2011 Workshop on Context-awareness in Retrieval and Recommendation}, CaRR
+  '11, (New York, NY, USA), pp.~47--50, ACM, 2011.
 
 \bibitem{web:recipe}
 Wiki, ``Typical foods by area.'' \url{http://www.s-recipe.com/}.

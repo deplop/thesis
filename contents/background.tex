@@ -1,31 +1,39 @@
-\chapter{Background: The TF-IDF numerical statistic }\label{chap:bg}
+\chapter{Background}\label{chap:bg}
+
+\section{Computer aid cooking activities}
+
+Cooking and eating have been the most fundamental activities of humankind since the days of trading caravans in the ancient days until now, which affect various aspects of human life such as health, dietary, human communication, safety of food, entertainment, culinary art, welfare, and so on. However, many people who cook at home require supports for cooking because it requires experience and knowledge. They may also need support for food-logging and menu planning for the health of their family. Needless to say, support for a good and enjoyable dinner would improve the quality of life. On the other hand, systematic cooking and eating support for the elderly and/or physically challenged people are significantly important.
+
+Together with the development of technology and the availability of equipment in cooking, many supporting systems are introduced. For example, the cooking support system utilizing built-in cameras and projectors~\cite{morioka:camera-projecter}, the cooking support system by using ubiquitous sensors~\cite{nakauchi:recog}, the calorie measurement system by image processing~\cite{villalobos:image-calorie} or the system which helps inexperienced users in understanding non-professional recipe descriptions~\cite{ide:inexper}, etc. 
+
+
+However, by using analysis job we can discover the dominant ingredients and tastes in foods and understand how to alter the taste from one to another. 
+
+\section{The TF-IDF numerical statistic}
 
 In the existing cooking support systems, the methods vary such as image processing, text retrieval, sensing, etc. We use the text processing approach to directly analyze the recipes with their ingredients and amount of ingredients. In this research we use a famous method named TF-IDF, which is originally used for weighting word and documents. 
 
 In this chapter, we introduce background of TF-IDF method, the idea, applications, mathematical definition and problems in section 2.1, 2.2, 2.3 respectively.  
 
 \clearpage
-\section{Introduction about TF-IDF, the Idea and Applications}\label{sec:bg_intro}
+\subsection{Overview of TF-IDF Algorithm and Its Application}\label{sec:bg_intro}
 
-\subsection{The Motivation and Idea}
+
 One of the earliest and most popular ways to create weighting vectors is the TF-IDF family of weighting schemes.  
 
 In 1972, Karen Sp̈arck Jones published in the Journal of Documentation a paper called ``A statistical interpretation of term specificity and its application in retrieval''~\cite{Jones72astatistical}. The measure of term specificity first proposed in that paper later became known as inverse document frequency, or IDF; it is based on counting the number of documents in the collection being searched which contain (or are indexed by) the term in question. The intuition was that a query term which occurs in many documents is not a good discriminator, and should be given less weight than one which occurs in few documents, and the measure was an heuristic implementation of this intuition.
 The intuition, and the measure associated with it, proved to be a giant leap in the field of information retrieval. Coupled with TF (the frequency of the term in the document itself, in this case, the more the better), it found its way into almost every term weighting scheme.
-The class of weighting schemes known generically as TF*IDF, which involve multiplying the IDF measure (possibly one of a number of variants) by a TF measure (again possibly one of
-a number of variants, not just the raw count) have proved extraordinarily robust and difficult to beat, even by much more carefully worked out models and theories. It has even made
-its way outside of text retrieval into methods for retrieval of other media, and into language processing techniques for other purposes.
+The class of weighting schemes known generically as TF*IDF, which involve multiplying the IDF measure (possibly one of a number of variants) by a TF measure (again possibly one of a number of variants, not just the raw count) have proved extraordinarily robust and difficult to beat, even by much more carefully worked out models and theories. It has even made its way outside of text retrieval into methods for retrieval of other media, and into language processing techniques for other purposes.
 
 For example, say that we have a set of English text documents and wish to determine which document is most relevant to the query "a good man". A simple way to start out is by eliminating documents that do not contain all three words "a", "good", and "man", but this still leaves many documents. To further distinguish them, we might count the number of times each term occurs in each document and sum them all together; the number of times a term occurs in a document is called its term frequency.
 
 However, because the term "a" is so common, this will tend to incorrectly emphasize documents which happen to use the word "a" more frequently, without giving enough weight to the more meaningful terms "good" and "man". The term "a" is not a good keyword to distinguish relevant and non-relevant documents and terms, unlike the less common words "good" and "man". Hence an inverse document frequency factor is incorporated which diminishes the weight of terms that occur very frequently in the document set and increases the weight of terms that occur rarely.
 
-\subsection{Applications}
 
 Variations of the TF-IDF weighting scheme are often used by search engines as a central tool in scoring and ranking a document's relevance given a user query. TF-IDF can be successfully used for stop-words filtering in various subject fields including text summarization and classification.
 
 
-\section{Mathematical Details}\label{sec:bg_detail}
+\subsection{Mathematical Details}\label{sec:bg_detail}
 
 The inverse document frequency is a measure of whether the term is common or rare across all documents. It is obtained by dividing the total number of documents by the number of documents containing the term, and then taking the logarithm of that quotient.
 
@@ -52,7 +60,7 @@ $\mathrm{tfidf}(t,d,D) = \mathrm{tf}(t,d) \times \mathrm{idf}(t, D)$
 The formula above is the simplest way to implement TF-IDF weighting scheme. Different schemes are used in specific case depends on the problems the system solves. Our research also use the idea of TF-IDF scheme but specific problem of analyzing regional food's taste.  
 
 
-\section{Problem related to TF-IDF}\label{sec:bg_prob}
+\subsection{Related Problems to TF-IDF}\label{sec:bg_prob}
 
 Though TF-IDF is a robust weighting scheme, for different systems it is adapted in different ways and there are also according problems. 
 
@@ -60,7 +68,3 @@ For the system in which the database of documents is often updated, typically ne
 
 One option is to keep using the existing TF-IDF until a certain number of new documents have been received, and the recalculate it. But there are systems that require update instantly, these system will encounter the problem of massive calculation. Especially in our regional food's featured ingredient system, because of the way we apply the TF-IDF algorithm, the recalculation on updating data became more expensive. We will propose a method to solve this problems in chapter 4.     
 
-
-\section{Summary}\label{sec:bg_sm}
-
-In this chapter, we discuss about background of IF-IDF algorithm, its applications and also related problems as basic knowledge to understand the algorithm we proposed in the following chapters. 

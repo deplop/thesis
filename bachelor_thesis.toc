@@ -1,20 +1,16 @@
 \select@language {american}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Background}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Challenges and Research Goals}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Structure of Thesis}{3}{section.1.3}
-\contentsline {chapter}{\numberline {2}Background: The TF-IDF numerical statistic }{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction about TF-IDF, the Idea and Applications}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}The Motivation and Idea}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Applications}{6}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Mathematical Details}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Problem related to TF-IDF}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Summary}{8}{section.2.4}
+\contentsline {section}{\numberline {1.1}Challenges and Research Goals}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Structure of Thesis}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Background}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Computer aid cooking activities}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}The TF-IDF numerical statistic}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Overview of TF-IDF Algorithm and Its Application}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Mathematical Details}{7}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Related Problems to TF-IDF}{8}{subsection.2.2.3}
 \contentsline {chapter}{\numberline {3}Related Work}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Recommending Recipe by Ingredients}{10}{section.3.1}
 \contentsline {section}{\numberline {3.2}Replacing ingredients}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}TF-IDF algorithm}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Summary}{11}{section.3.4}
 \contentsline {chapter}{\numberline {4}Food's Feature-Ingredient Extraction Algorithm}{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}Ingredient Frequency}{12}{section.4.1}
 \contentsline {section}{\numberline {4.2}Ingredient Amount}{13}{section.4.2}
@@ -25,13 +21,13 @@
 \contentsline {subsection}{\numberline {4.5.2}IU recalculation on update}{16}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}IA recalculation on update}{17}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}FI recalculation on update}{17}{subsection.4.5.4}
-\contentsline {chapter}{\numberline {5}Implementation}{18}{chapter.5}
+\contentsline {chapter}{\numberline {5}Prototype System and Its Implementation}{18}{chapter.5}
 \contentsline {subsection}{\numberline {5.0.5}The Recipe Database}{18}{subsection.5.0.5}
 \contentsline {subsection}{\numberline {5.0.6}Ingredient Frequency}{19}{subsection.5.0.6}
 \contentsline {subsection}{\numberline {5.0.7}Ingredient Amount}{20}{subsection.5.0.7}
 \contentsline {subsection}{\numberline {5.0.8}Ingredient Uniqueness}{20}{subsection.5.0.8}
 \contentsline {subsection}{\numberline {5.0.9}Featured Index}{22}{subsection.5.0.9}
-\contentsline {chapter}{\numberline {6}Application}{23}{chapter.6}
+\contentsline {chapter}{\numberline {6}Web-based Application}{23}{chapter.6}
 \contentsline {section}{\numberline {6.1}The System's Outline}{23}{section.6.1}
 \contentsline {section}{\numberline {6.2}The System's Model}{24}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}The Recipe Suggestion Module Based On Available Materials}{24}{subsection.6.2.1}
@@ -39,9 +35,10 @@
 \contentsline {subsection}{\numberline {6.2.3}The Nearest Recipe Selection Module}{26}{subsection.6.2.3}
 \contentsline {section}{\numberline {6.3}Database Design}{28}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Entity Relation Diagram}{28}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Database Scheme}{28}{subsection.6.3.2}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Works}{31}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusions}{31}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Works}{31}{section.7.2}
-\contentsline {subsubsection}{Long Talk}{33}{section*.6}
-\contentsline {subsubsection}{Poster}{33}{section*.7}
+\contentsline {subsection}{\numberline {6.3.2}Database Scheme}{30}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Database for real Data}{30}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Works}{32}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{32}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Works}{32}{section.7.2}
+\contentsline {subsubsection}{Long Talk}{34}{section*.6}
+\contentsline {subsubsection}{Poster}{34}{section*.7}
