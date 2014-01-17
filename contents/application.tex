@@ -167,6 +167,7 @@ The $TF$, $IA$, $MA$ and $IF$ value of ingredient are shown in Fig.~\ref{fig:ing
 
 \section{Web Interfaces}
 
+Fig.~\ref{fig:your_ingredient} shows the pages for submission of user's home-available ingredients. After register their ingredients, the system will calculate and recommend a list of suitable recipes. 
 
 \begin{figure}
 \centering
@@ -175,6 +176,17 @@ The $TF$, $IA$, $MA$ and $IF$ value of ingredient are shown in Fig.~\ref{fig:ing
 \label{fig:your_ingredient}
 \end{figure}
 
+In Fig.~\ref{fig:your_recipe}, there are two recipes registered by user. User sometime make their own recipes, take a picture and submit it to the system. Because we know which region user live in, this makes the diversity of regional food database.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{your_recipe.eps}
+\caption{Page shows your own recipes.}
+\label{fig:precipitous}
+\end{figure}
+
+To register their own recipes, users can use the interface shown in Fig.~\ref{fig:register_recipe}.
+ 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{register_recipe.eps}
@@ -182,13 +194,8 @@ The $TF$, $IA$, $MA$ and $IF$ value of ingredient are shown in Fig.~\ref{fig:ing
 \label{fig:register_recipe}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.5]{your_recipe.eps}
-\caption{Page shows your own recipes.}
-\label{fig:your_recipe}
-\end{figure}
-
+For the recipe transformation function. After choosing a target region's taste and clicking to the submit button in Fig.~\ref{fig:choose_target}, the system will use the third module in Fig.~\ref{fig:system-model} to output a new recipe with replaced ingredients.
+ 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{choose_target.eps}

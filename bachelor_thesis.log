@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.1.6)  17 JAN 2014 06:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.1.6)  17 JAN 2014 13:54
 entering extended mode
  %&-line parsing enabled.
 **bachelor_thesis.tex
@@ -487,11 +487,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
 ]
 (./contents/abstract.tex) [1] (./bachelor_thesis.toc [2
 
-])
+] [3])
 \tf@toc=\write4
 \openout4 = `bachelor_thesis.toc'.
 
- [3] [4]
+ [4]
 (./bachelor_thesis.lot)
 \tf@lot=\write5
 \openout5 = `bachelor_thesis.lot'.
@@ -618,29 +618,35 @@ File: ingredient.eps Graphic file (type eps)
  <ingredient.eps>
 File: your_ingredient.eps Graphic file (type eps)
  <your_ingredient.eps>
-Overfull \hbox (54.48703pt too wide) in paragraph at lines 173--174
+Overfull \hbox (54.48703pt too wide) in paragraph at lines 174--175
+ [][] 
+ []
+
+[30] [31]
+
+LaTeX Warning: Reference `fig:your_recipe' on page 32 undefined on input line 1
+79.
+
+File: your_recipe.eps Graphic file (type eps)
+<your_recipe.eps>
+Overfull \hbox (40.43454pt too wide) in paragraph at lines 183--184
  [][] 
  []
 
 File: register_recipe.eps Graphic file (type eps)
 <register_recipe.eps>
-Overfull \hbox (11.82765pt too wide) in paragraph at lines 180--181
+Overfull \hbox (11.82765pt too wide) in paragraph at lines 192--193
  [][] 
  []
 
-File: your_recipe.eps Graphic file (type eps)
-<your_recipe.eps>
-Overfull \hbox (40.43454pt too wide) in paragraph at lines 187--188
- [][] 
- []
-
+[32] [33] [34]
 File: choose_target.eps Graphic file (type eps)
-<choose_target.eps>
-Overfull \hbox (1.79016pt too wide) in paragraph at lines 194--195
+ <choose_target.eps>
+Overfull \hbox (1.79016pt too wide) in paragraph at lines 201--202
  [][] 
  []
 
-) (./contents/conclusion.tex [30] [31] [32] [33] [34] [35]
+) (./contents/conclusion.tex [35]
 Chapter 7.
 ) (./contents/ack.tex [36
 
@@ -652,16 +658,16 @@ Chapter 7.
 
 ] [40]) [41] [42] (./bachelor_thesis.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 8361 strings out of 493849
- 117187 string characters out of 1152847
+ 8362 strings out of 493849
+ 117204 string characters out of 1152847
  226218 words of memory out of 3000000
- 11402 multiletter control sequences out of 15000+50000
+ 11403 multiletter control sequences out of 15000+50000
  18699 words of font info for 69 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,9n,40p,1197b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bachelor_thesis.dvi (49 pages, 120296 bytes).
+Output written on bachelor_thesis.dvi (49 pages, 124012 bytes).
