@@ -3,14 +3,14 @@
 \contentsline {section}{\numberline {1.1}Challenges and Research Goals}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Structure of Thesis}{3}{section.1.2}
 \contentsline {chapter}{\numberline {2}Background}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Computer aid cooking activities}{4}{section.2.1}
+\contentsline {section}{\numberline {2.1}Computer Aid Cooking Activities}{4}{section.2.1}
 \contentsline {section}{\numberline {2.2}The TF-IDF Numerical Statistic}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Overview of TF-IDF Algorithm and Its Application}{7}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Mathematical Details}{8}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Related Problems to TF-IDF}{9}{subsection.2.2.3}
 \contentsline {chapter}{\numberline {3}Related Work}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Recommending Recipe by Ingredients}{11}{section.3.1}
-\contentsline {section}{\numberline {3.2}Replacing ingredients}{11}{section.3.2}
+\contentsline {section}{\numberline {3.1}Recommending Recipe by Ingredients Researches}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Replacing Ingredients Research}{12}{section.3.2}
 \contentsline {chapter}{\numberline {4}Food's Feature-Ingredient Extraction Algorithm}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}Ingredient Frequency}{13}{section.4.1}
 \contentsline {section}{\numberline {4.2}Ingredient Amount}{14}{section.4.2}
@@ -36,8 +36,7 @@
 \contentsline {section}{\numberline {6.3}Database Design}{29}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Entity Relation Diagram}{29}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Database Scheme}{31}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Database for real Data}{31}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Web Interfaces}{33}{section.6.4}
+\contentsline {section}{\numberline {6.4}Web Interfaces}{31}{section.6.4}
 \contentsline {chapter}{\numberline {7}Conclusions and Future Works}{37}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusions}{37}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Works}{37}{section.7.2}

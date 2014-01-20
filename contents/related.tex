@@ -2,27 +2,27 @@
 
 In our research, we propose a system that can allow user to register their available ingredients in their home and then recommend suitable recipes based on these ingredients. The system can also replace some ingredients in original recipe to get a new recipe that has targeted region's tastes. 
 
-In this chapter, we introduce some related works to these functions and also the related work to TF-IDF algorithm. 
+In this chapter, we introduce some related works to these functions. 
 
 \clearpage
 
-\section{Recommending Recipe by Ingredients}\label{sec:related_near}
+\section{Recommending Recipe by Ingredients Researches}\label{sec:related_near}
 
+Recipe recommendation and retrieval has been the subject of cooking related research. One of the earlier works is Kalas, a social navigation system for food recipe, developed by Svensson et al.~\cite{Svensson:2005:DEK:1096737.1096739}. Xie et al.~\cite{5693849} proposed a hybrid semantic item model for recipe search by example. The hybrid semantic item model represents different kinds of features of recipe data. 
 
-Recipe recommendation and retrieval has been the subject of
-cooking related research. One of the earlier works is Kalas, a social navigation system for food recipe, developed by Svensson et al.~\cite{Svensson:2005:DEK:1096737.1096739}. Xie et al.~\cite{5693849} proposed a hybrid semantic item model for recipe search by example. The hybrid semantic item model represents different kinds of features of recipe data. 
+Another branch of recommending recipe by ingredients research has focused on the recipe
+recommendation for healthy food. Mino et al. investigated the recommendation of cooking recipes for a diet in which the evaluation value of intake or consumption of calorie is considered in the events of a user's schedule during the period of a diet~\cite{5358168}. Concretely, the evaluation value of either intake or consumption calorie is assigned to each event in the user's schedule, and then based on the calculation with the values, some candidates of recipes with calorie to make the user easily lost weight for the objective weight are selected considering the user's schedule during the period of a diet. Linear programming approach is utilized with the constraints of carbohydrate, lipid, protein, salt, and increasing the amount of vegetable intake. 
 
+Karikome and Fujii propose a system to help users for planning nutritionally balanced menus~\cite{Karikome:2010:SSD:2108616.2108684}. Considerations of recipes that correct the user’s nutritional imbalance are incorporated into the recipe retrieval process. Visualization of dietary habits are also provided by this system.
 
-Another branch of research has focused on the recipe
-recommendation for healthy food. Mino et al. investigated the recommendation of cooking recipes for a diet in which the evaluation value of intake or consumption of calorie is considered in the events of a user's schedule during the period of a diet~\cite{5358168}. Linear programming approach is utilized with the constraints of carbohydrate, lipid, protein, salt, and increasing the amount of vegetable intake. Karikome and Fujii propose a system to help users for planning nutritionally balanced menus~\cite{Karikome:2010:SSD:2108616.2108684}. Considerations of recipes that correct the user’s nutritional imbalance are incorporated into
-the recipe retrieval process.
-Visualization of dietary habits are also provided by this system.
+By many methods researcher are proposing different ways to recommend or plan suitable recipes for users.  
 
+\section{Replacing Ingredients Research}
 
-\section{Replacing ingredients}
+For some reasons, people want to replace some ingredients in recipes by another ingredients such as reducing the cost with similar tastes or for trying new targeted region's taste with original recipe as in our research. The replacement is not random, they all follow principles proposed by researchers.
 
 Shidochi et al. proposed an approach to extract replaceable
-ingredients from recipes in to satisfy users' various demands, such as calorie constraints and food availability ~\cite{Shidochi:2009:FRM:1630995.1630998}. 
+ingredients from recipes to satisfy users' various demands, such as calorie constraints and food availability ~\cite{Shidochi:2009:FRM:1630995.1630998}. 
 
 In order to develop a strategy for changing users eating and cooking behaviors, Pinxteren et al. proposed a user-centered similarity measure for recommendation of healthier alternatives which are perceived to be similar to users commonly selected meals~\cite{vanPinxteren:2011:DRS:1943403.1943422}. The similarity measure can be used to promote new recipes that fit users’ lifestyle. 
 
