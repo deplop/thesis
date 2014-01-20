@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.1.6)  17 JAN 2014 13:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.1.6)  20 JAN 2014 10:53
 entering extended mode
  %&-line parsing enabled.
 **bachelor_thesis.tex
@@ -514,23 +514,23 @@ Chapter 1.
 Chapter 2.
 [4
 
-] [5]
+] [5] [6]
 Missing character: There is no Ì in font cmr12!
 Missing character: There is no ˆ in font cmr12!
- [6
+ [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[7]
+[8]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) (./contents/related.tex [8]
+) (./contents/related.tex [9]
 Chapter 3.
-[9
+[10
 
 ]
 Missing character: There is no â in font cmr12!
@@ -548,19 +548,19 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-) (./contents/algorithm.tex [10
+) (./contents/algorithm.tex [11
 
-] [11]
+] [12]
 Chapter 4.
-[12
+[13
 
-] [13] [14] [15] [16]) (./contents/implementation.tex [17]
+] [14] [15] [16] [17]) (./contents/implementation.tex [18]
 Chapter 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
-[18
+[19
 
 ] (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.bdg
 File: UTF8.bdg 2008/12/29 4.8.2
@@ -584,18 +584,18 @@ File: UTF8.enc 2008/12/29 4.8.2
 )
 (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2008/12/29 4.8.2
-) [19]
+) [20]
 (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
 File: UTF8.enc 2008/12/29 4.8.2
 )
 (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2008/12/29 4.8.2
-) [20] [21])
-(./contents/application.tex [22]
+) [21] [22])
+(./contents/application.tex [23]
 Chapter 6.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
-[23
+[24
 
 ]
 File: system.eps Graphic file (type eps)
@@ -604,14 +604,14 @@ Overfull \hbox (38.02747pt too wide) in paragraph at lines 24--25
  [][] 
  []
 
-[24] [25] [26] [27] [28]
+[25] [26] [27] [28] [29]
 File: ER.eps Graphic file (type eps)
  <ER.eps>
 Overfull \hbox (28.69934pt too wide) in paragraph at lines 131--132
  [][] 
  []
 
-[29]
+[30]
 File: scheme.eps Graphic file (type eps)
  <scheme.eps>
 File: ingredient.eps Graphic file (type eps)
@@ -622,13 +622,9 @@ Overfull \hbox (54.48703pt too wide) in paragraph at lines 174--175
  [][] 
  []
 
-[30] [31]
-
-LaTeX Warning: Reference `fig:your_recipe' on page 32 undefined on input line 1
-79.
-
+[31] [32]
 File: your_recipe.eps Graphic file (type eps)
-<your_recipe.eps>
+ <your_recipe.eps>
 Overfull \hbox (40.43454pt too wide) in paragraph at lines 183--184
  [][] 
  []
@@ -639,35 +635,35 @@ Overfull \hbox (11.82765pt too wide) in paragraph at lines 192--193
  [][] 
  []
 
-[32] [33] [34]
+[33] [34] [35]
 File: choose_target.eps Graphic file (type eps)
  <choose_target.eps>
 Overfull \hbox (1.79016pt too wide) in paragraph at lines 201--202
  [][] 
  []
 
-) (./contents/conclusion.tex [35]
+) (./contents/conclusion.tex [36]
 Chapter 7.
-) (./contents/ack.tex [36
+) (./contents/ack.tex [37
 
-]) (./contents/pub.tex [37
+]) (./contents/pub.tex [38
 
-]) (./contents/appendix.tex) (./bachelor_thesis.bbl [38
+]) (./contents/appendix.tex) (./bachelor_thesis.bbl [39
 
-] [39
+] [40
 
-] [40]) [41] [42] (./bachelor_thesis.aux)
+] [41]) [42] [43] (./bachelor_thesis.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 8362 strings out of 493849
- 117204 string characters out of 1152847
+ 8361 strings out of 493849
+ 117187 string characters out of 1152847
  226218 words of memory out of 3000000
- 11403 multiletter control sequences out of 15000+50000
+ 11402 multiletter control sequences out of 15000+50000
  18699 words of font info for 69 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,9n,40p,1197b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on bachelor_thesis.dvi (49 pages, 124012 bytes).
+Output written on bachelor_thesis.dvi (50 pages, 127228 bytes).
